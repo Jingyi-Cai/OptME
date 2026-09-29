@@ -1,0 +1,178 @@
+{
+  "3HAD100": {
+    "reaction": "3hdecACP_c --> h2o_c + tdec2eACP_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3HAD121": {
+    "reaction": "3hcddec5eACP_c --> h2o_c + t3c5ddeceACP_c",
+    "wild_range": [
+      0.099,
+      0.11
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3HAD141": {
+    "reaction": "3hcmrs7eACP_c --> h2o_c + t3c7mrseACP_c",
+    "wild_range": [
+      0.099,
+      0.11
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3HAD161": {
+    "reaction": "3hcpalm9eACP_c --> h2o_c + t3c9palmeACP_c",
+    "wild_range": [
+      0.097,
+      0.107
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3HAD181": {
+    "reaction": "3hcvac11eACP_c --> h2o_c + t3c11vaceACP_c",
+    "wild_range": [
+      0.095,
+      0.105
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3HAD40": {
+    "reaction": "3haACP_c --> but2eACP_c + h2o_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3HAD60": {
+    "reaction": "3hhexACP_c --> h2o_c + thex2eACP_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3HAD80": {
+    "reaction": "3hoctACP_c --> h2o_c + toct2eACP_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3OAR100": {
+    "reaction": "3odecACP_c + h_c + nadph_c --> 3hdecACP_c + nadp_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3OAR40": {
+    "reaction": "actACP_c + h_c + nadph_c --> 3haACP_c + nadp_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3OAR60": {
+    "reaction": "3ohexACP_c + h_c + nadph_c --> 3hhexACP_c + nadp_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3OAR80": {
+    "reaction": "3ooctACP_c + h_c + nadph_c --> 3hoctACP_c + nadp_c",
+    "wild_range": [
+      0.181,
+      0.201
+    ],
+    "eng_range": [
+      0.02,
+      0.02
+    ]
+  },
+  "3OAR121": {
+    "reaction": "3ocddec5eACP_c + h_c + nadph_c --> 3hcddec5eACP_c + nadp_c",
+    "wild_range": [
+      0.099,
+      0.11
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3OAR141": {
+    "reaction": "3ocmrs7eACP_c + h_c + nadph_c --> 3hcmrs7eACP_c + nadp_c",
+    "wild_range": [
+      0.099,
+      0.11
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3OAR161": {
+    "reaction": "3ocpalm9eACP_c + h_c + nadph_c --> 3hcpalm9eACP_c + nadp_c",
+    "wild_range": [
+      0.097,
+      0.107
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  },
+  "3OAR181": {
+    "reaction": "3ocvac11eACP_c + h_c + nadph_c --> 3hcvac11eACP_c + nadp_c",
+    "wild_range": [
+      0.095,
+      0.105
+    ],
+    "eng_range": [
+      0.011,
+      0.011
+    ]
+  }
+}

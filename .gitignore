@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.env
+*.lic
+script/results/
+script/lpfiles/
+output/tmp/
+*.lp

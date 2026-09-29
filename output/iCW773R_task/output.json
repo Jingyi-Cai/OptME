@@ -1,0 +1,786 @@
+{
+    "summary": {
+        "Prod_Rate(mmol/gDW/h)": 6.555,
+        "Growth(1/h)": 0.434,
+        "Yield": {
+            "Ycm": 1.5,
+            "Ycg": 1.5,
+            "Yrm": 2.0,
+            "Yrg": 1.267,
+            "Ysm": 0,
+            "Ysg": 0,
+            "Yscm": 0,
+            "Yscg": 0
+        }
+    },
+    "data": {
+        "FSEOF": {
+            "summary": {
+                "UP": 0,
+                "Down": 30,
+                "KO": 0
+            },
+            "reaction": {
+                "EAR121x": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.333,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "EAR121x",
+                    "Enzyme_Name": "enoyl-[acyl-carrier-protein] reductase (NADH) (n-C12:1)",
+                    "Gene_ID": "Cgl0719",
+                    "Equation": "h_c + nadh_c + t3c5ddeceACP_c --> cddec5eACP_c + nad_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/EAR121x.png",
+                    "score": 0.555496
+                },
+                "EAR141x": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.333,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "EAR141x",
+                    "Enzyme_Name": "enoyl-[acyl-carrier-protein] reductase (NADH) (n-C14:1)",
+                    "Gene_ID": "Cgl0719",
+                    "Equation": "h_c + nadh_c + t3c7mrseACP_c --> nad_c + tdeACP_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/EAR141x.png",
+                    "score": 0.555496
+                },
+                "3HAD100": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.183,
+                    "Reaction_ID": "3HAD100",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C10:0)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hdecACP_c --> h2o_c + tdec2eACP_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/3HAD100.png",
+                    "score": 1.0
+                },
+                "AIRC3_reverse": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "AIRC3_reverse",
+                    "Enzyme_Name": "",
+                    "Gene_ID": "Cgl0714",
+                    "Equation": "5caiz_c --> 5aizc_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/AIRC3_reverse.png",
+                    "score": 0.584699
+                },
+                "LEUTAi": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.153,
+                    "Reaction_ID": "LEUTAi",
+                    "Enzyme_Name": "leucine transaminase (irreversible)",
+                    "Gene_ID": "Cgl2204",
+                    "Equation": "4mop_c + glu__L_c --> akg_c + leu__L_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/LEUTAi.png",
+                    "score": 0.836066
+                },
+                "IPPS": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.153,
+                    "Reaction_ID": "IPPS",
+                    "Enzyme_Name": "2-isopropylmalate synthase",
+                    "Gene_ID": "Cgl0248",
+                    "Equation": "3mob_c + accoa_c + h2o_c --> 3c3hmp_c + coa_c + h_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/IPPS.png",
+                    "score": 0.836066
+                },
+                "IPMD": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.153,
+                    "Reaction_ID": "IPMD",
+                    "Enzyme_Name": "3-isopropylmalate dehydrogenase",
+                    "Gene_ID": "Cgl1286",
+                    "Equation": "3c2hmp_c + nad_c --> 3c4mop_c + h_c + nadh_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/IPMD.png",
+                    "score": 0.836066
+                },
+                "SHKK": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.102,
+                    "Reaction_ID": "SHKK",
+                    "Enzyme_Name": "shikimate kinase",
+                    "Gene_ID": "Cgl1622",
+                    "Equation": "atp_c + skm_c --> adp_c + h_c + skm5p_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/SHKK.png",
+                    "score": 0.557377
+                },
+                "PSCVT": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.102,
+                    "Reaction_ID": "PSCVT",
+                    "Enzyme_Name": "3-phosphoshikimate 1-carboxyvinyltransferase",
+                    "Gene_ID": "Cgl0764",
+                    "Equation": "pep_c + skm5p_c --> 3psme_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/PSCVT.png",
+                    "score": 0.557377
+                },
+                "DHQTi": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.102,
+                    "Reaction_ID": "DHQTi",
+                    "Enzyme_Name": "3-dehydroquinate dehydratase, irreversible",
+                    "Gene_ID": "Cgl0423",
+                    "Equation": "3dhq_c --> 3dhsk_c + h2o_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/DHQTi.png",
+                    "score": 0.557377
+                },
+                "DHQS": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.102,
+                    "Reaction_ID": "DHQS",
+                    "Enzyme_Name": "3-dehydroquinate synthase",
+                    "Gene_ID": "Cgl1621",
+                    "Equation": "2dda7p_c --> 3dhq_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/DHQS.png",
+                    "score": 0.557377
+                },
+                "DDPA": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.102,
+                    "Reaction_ID": "DDPA",
+                    "Enzyme_Name": "3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase",
+                    "Gene_ID": "Cgl0990 and Cgl2178",
+                    "Equation": "e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/DDPA.png",
+                    "score": 0.557377
+                },
+                "CHORS": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.102,
+                    "Reaction_ID": "CHORS",
+                    "Enzyme_Name": "chorismate synthase",
+                    "Gene_ID": "Cgl1623",
+                    "Equation": "3psme_c --> chor_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/CHORS.png",
+                    "score": 0.557377
+                },
+                "DHDPS": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "DHDPS",
+                    "Enzyme_Name": "dihydrodipicolinate synthase",
+                    "Gene_ID": "Cgl1971",
+                    "Equation": "aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/DHDPS.png",
+                    "score": 0.546448
+                },
+                "DHDPRy": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "DHDPRy",
+                    "Enzyme_Name": "dihydrodipicolinate reductase (NADPH)",
+                    "Gene_ID": "Cgl1973",
+                    "Equation": "23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/DHDPRy.png",
+                    "score": 0.546448
+                },
+                "PRASCSi": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "PRASCSi",
+                    "Enzyme_Name": "phosphoribosylaminoimidazolesuccinocarboxamide synthase",
+                    "Gene_ID": "Cgl2597",
+                    "Equation": "5aizc_c + asp__L_c + atp_c --> 25aics_c + adp_c + h_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/PRASCSi.png",
+                    "score": 0.584699
+                },
+                "IPPMIa_reverse": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.153,
+                    "Reaction_ID": "IPPMIa_reverse",
+                    "Enzyme_Name": "",
+                    "Gene_ID": "Cgl1315 and Cgl1316",
+                    "Equation": "2ippm_c + h2o_c --> 3c2hmp_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/IPPMIa_reverse.png",
+                    "score": 0.836066
+                },
+                "PRAIS": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "PRAIS",
+                    "Enzyme_Name": "phosphoribosylaminoimidazole synthase",
+                    "Gene_ID": "Cgl2583",
+                    "Equation": "atp_c + fpram_c --> adp_c + air_c + 2.0 h_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/PRAIS.png",
+                    "score": 0.584699
+                },
+                "PRAGSr": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "PRAGSr",
+                    "Enzyme_Name": "phosphoribosylglycinamide synthase",
+                    "Gene_ID": "Cgl2600",
+                    "Equation": "atp_c + gly_c + pram_c --> adp_c + gar_c + h_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/PRAGSr.png",
+                    "score": 0.584699
+                },
+                "GLUPRT": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "GLUPRT",
+                    "Enzyme_Name": "glutamine phosphoribosyldiphosphate amidotransferase",
+                    "Gene_ID": "Cgl2584",
+                    "Equation": "gln__L_c + h2o_c + prpp_c --> glu__L_c + ppi_c + pram_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/GLUPRT.png",
+                    "score": 0.584699
+                },
+                "GARFT": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "GARFT",
+                    "Enzyme_Name": "phosphoribosylglycinamide formyltransferase",
+                    "Gene_ID": "Cgl0860 and Cgl2759",
+                    "Equation": "10fthf_c + gar_c --> fgam_c + h_c + thf_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/GARFT.png",
+                    "score": 0.584699
+                },
+                "AIRC2": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "AIRC2",
+                    "Enzyme_Name": "phosphoribosylaminoimidazole carboxylase",
+                    "Gene_ID": "Cgl0711",
+                    "Equation": "air_c + atp_c + hco3_c --> 5caiz_c + adp_c + h_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/AIRC2.png",
+                    "score": 0.584699
+                },
+                "AICART": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.136,
+                    "Reaction_ID": "AICART",
+                    "Enzyme_Name": "phosphoribosylaminoimidazolecarboxamide formyltransferase",
+                    "Gene_ID": "Cgl0861",
+                    "Equation": "10fthf_c + aicar_c --> fprica_c + thf_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/AICART.png",
+                    "score": 0.743169
+                },
+                "ADSL2r": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "ADSL2r",
+                    "Enzyme_Name": "adenylosuccinate lyase",
+                    "Gene_ID": "Cgl2598",
+                    "Equation": "25aics_c --> aicar_c + fum_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/ADSL2r.png",
+                    "score": 0.584699
+                },
+                "3OAR141": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "3OAR141",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C14:1)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ocmrs7eACP_c + h_c + nadph_c --> 3hcmrs7eACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/3OAR141.png",
+                    "score": 0.546448
+                },
+                "3OAR121": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "3OAR121",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C12:1)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ocddec5eACP_c + h_c + nadph_c --> 3hcddec5eACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/3OAR121.png",
+                    "score": 0.546448
+                },
+                "3HAD141": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "3HAD141",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C14:1)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hcmrs7eACP_c --> h2o_c + t3c7mrseACP_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/3HAD141.png",
+                    "score": 0.546448
+                },
+                "3HAD121": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.1,
+                    "Reaction_ID": "3HAD121",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C12:1)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hcddec5eACP_c --> h2o_c + t3c5ddeceACP_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/3HAD121.png",
+                    "score": 0.546448
+                },
+                "PRFGS": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.107,
+                    "Reaction_ID": "PRFGS",
+                    "Enzyme_Name": "phosphoribosylformylglycinamidine synthase",
+                    "Gene_ID": "Cgl2588 and Cgl2589 and Cgl2590",
+                    "Equation": "atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/PRFGS.png",
+                    "score": 0.584699
+                },
+                "IPPMIb_reverse": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.295,
+                    "Average_Flux": 0.153,
+                    "Reaction_ID": "IPPMIb_reverse",
+                    "Enzyme_Name": "",
+                    "Gene_ID": "Cgl1315 and Cgl1316",
+                    "Equation": "3c3hmp_c --> 2ippm_c + h2o_c",
+                    "figpath": "output/iCW773R_task/FSEOF/target_fig/IPPMIb_reverse.png",
+                    "score": 0.836066
+                }
+            }
+        },
+        "OptForce": {
+            "summary": {
+                "UP": 0,
+                "Down": 16,
+                "KO": 2
+            },
+            "reaction": {
+                "FUM": {
+                    "Modification": "KO",
+                    "Fold_Change": 0.0,
+                    "Average_Flux": 5.62,
+                    "Reaction_ID": "FUM",
+                    "Enzyme_Name": "fumarase",
+                    "Gene_ID": "Cgl1010",
+                    "Equation": "fum_c + h2o_c --> mal__L_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/FUM.png",
+                    "score": 0.0
+                },
+                "ATPS4rpp": {
+                    "Modification": "KO",
+                    "Fold_Change": 0.0,
+                    "Average_Flux": 15.497,
+                    "Reaction_ID": "ATPS4rpp",
+                    "Enzyme_Name": "ATP synthase (four protons for one ATP)",
+                    "Gene_ID": "Cgl1213 and Cgl1211 and Cgl1210 and Cgl1208 and Cgl1212 and Cgl1209 and Cgl1207 and Cgl1206",
+                    "Equation": "adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/ATPS4rpp.png",
+                    "score": 0.0
+                },
+                "3HAD100": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3HAD100",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C10:0)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hdecACP_c --> h2o_c + tdec2eACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD100.png",
+                    "score": 1.0
+                },
+                "3HAD121": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.058,
+                    "Reaction_ID": "3HAD121",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C12:1)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hcddec5eACP_c --> h2o_c + t3c5ddeceACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD121.png",
+                    "score": 0.552381
+                },
+                "3HAD141": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.058,
+                    "Reaction_ID": "3HAD141",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C14:1)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hcmrs7eACP_c --> h2o_c + t3c7mrseACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD141.png",
+                    "score": 0.552381
+                },
+                "3HAD161": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.056,
+                    "Reaction_ID": "3HAD161",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C16:1)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hcpalm9eACP_c --> h2o_c + t3c9palmeACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD161.png",
+                    "score": 0.533333
+                },
+                "3HAD181": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.055,
+                    "Reaction_ID": "3HAD181",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C18:1)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hcvac11eACP_c --> h2o_c + t3c11vaceACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD181.png",
+                    "score": 0.52381
+                },
+                "3HAD40": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3HAD40",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C4:0)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3haACP_c --> but2eACP_c + h2o_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD40.png",
+                    "score": 1.0
+                },
+                "3HAD60": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3HAD60",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C6:0)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hhexACP_c --> h2o_c + thex2eACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD60.png",
+                    "score": 1.0
+                },
+                "3HAD80": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3HAD80",
+                    "Enzyme_Name": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C8:0)",
+                    "Gene_ID": "Cgl0289",
+                    "Equation": "3hoctACP_c --> h2o_c + toct2eACP_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3HAD80.png",
+                    "score": 1.0
+                },
+                "3OAR100": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3OAR100",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C10:0)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3odecACP_c + h_c + nadph_c --> 3hdecACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR100.png",
+                    "score": 1.0
+                },
+                "3OAR40": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3OAR40",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C4:0)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "actACP_c + h_c + nadph_c --> 3haACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR40.png",
+                    "score": 1.0
+                },
+                "3OAR60": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3OAR60",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C6:0)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ohexACP_c + h_c + nadph_c --> 3hhexACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR60.png",
+                    "score": 1.0
+                },
+                "3OAR80": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.105,
+                    "Reaction_ID": "3OAR80",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C8:0)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ooctACP_c + h_c + nadph_c --> 3hoctACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR80.png",
+                    "score": 1.0
+                },
+                "3OAR121": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.058,
+                    "Reaction_ID": "3OAR121",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C12:1)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ocddec5eACP_c + h_c + nadph_c --> 3hcddec5eACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR121.png",
+                    "score": 0.552381
+                },
+                "3OAR141": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.058,
+                    "Reaction_ID": "3OAR141",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C14:1)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ocmrs7eACP_c + h_c + nadph_c --> 3hcmrs7eACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR141.png",
+                    "score": 0.552381
+                },
+                "3OAR161": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.056,
+                    "Reaction_ID": "3OAR161",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C16:1)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ocpalm9eACP_c + h_c + nadph_c --> 3hcpalm9eACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR161.png",
+                    "score": 0.533333
+                },
+                "3OAR181": {
+                    "Modification": "Down",
+                    "Fold_Change": -3.248,
+                    "Average_Flux": 0.055,
+                    "Reaction_ID": "3OAR181",
+                    "Enzyme_Name": "3-oxoacyl-[acyl-carrier-protein] reductase (n-C18:1)",
+                    "Gene_ID": "Cgl0286 and Cgl0744",
+                    "Equation": "3ocvac11eACP_c + h_c + nadph_c --> 3hcvac11eACP_c + nadp_c",
+                    "figpath": "output/iCW773R_task/OptForce/target_fig/3OAR181.png",
+                    "score": 0.52381
+                }
+            }
+        },
+        "E_FSEOF": {
+            "summary": {
+                "UP": 1,
+                "Down": 0,
+                "KO": 0,
+                "Prod_Rate(mmol/gDW/h)": 15.0,
+                "Growth(1/h)": 0.868,
+                "Specific_Growth_Rate(1/h)": 0.868
+            },
+            "genes": {
+                "Cgl0689": {
+                    "Modification": "UP",
+                    "Fold_Change": 1.703,
+                    "Reaction_ID": [
+                        "PYRC_reverse",
+                        "PYRC"
+                    ],
+                    "Uniprot_ID": "H7C7K2",
+                    "Gene_ID": "Cgl0689",
+                    "Enzyme_Cost": [
+                        4.008806961910046
+                    ],
+                    "figpath": "output/iCW773R_task/E_FSEOF/target_fig/Cgl0689.png",
+                    "score": 1.0
+                }
+            }
+        },
+        "E_OptForce": {
+            "summary": {
+                "UP": 1,
+                "Down": 6,
+                "KO": 0,
+                "Prod_Rate(mmol/gDW/h)": 14.102,
+                "Growth(1/h)": 0.868,
+                "Specific_Growth_Rate(1/h)": 0.868
+            },
+            "genes": {
+                "Cgl0689": {
+                    "Modification": "UP",
+                    "Fold_Change": 1.462,
+                    "Reaction_ID": [
+                        "PYRC_reverse",
+                        "PYRC"
+                    ],
+                    "Uniprot_ID": "H7C7K2",
+                    "Gene_ID": "Cgl0689",
+                    "Enzyme_Cost": [
+                        8.231
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl0689.png",
+                    "score": 1.0
+                },
+                "Cgl1623": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.658,
+                    "Reaction_ID": [
+                        "CHORS"
+                    ],
+                    "Uniprot_ID": "Q9X5D0",
+                    "Gene_ID": "Cgl1623",
+                    "Enzyme_Cost": [
+                        1.299
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl1623.png",
+                    "score": 0.286922
+                },
+                "Cgl2491": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.668,
+                    "Reaction_ID": [
+                        "3OAS60_num1",
+                        "AACPS8_num1",
+                        "AACPS3_num1",
+                        "3OAS160_num1",
+                        "3OAS100_num1",
+                        "AACPS7_num1",
+                        "AACPS4_num1",
+                        "KAS15_num1",
+                        "3OAS120_num1",
+                        "3OAS181_num1",
+                        "3OAS161_num1",
+                        "ACPS1_num1",
+                        "AACPS9_num1",
+                        "AACPS5_num1",
+                        "AACPS6_num1",
+                        "AACPS1_num1",
+                        "3OAS121_num1",
+                        "3OAS180_num1",
+                        "KAS14_num1",
+                        "3OAS141_num1",
+                        "AACPS2_num1",
+                        "3OAS140_num1",
+                        "3OAS80_num1"
+                    ],
+                    "Uniprot_ID": "Q8NMS4",
+                    "Gene_ID": "Cgl2491",
+                    "Enzyme_Cost": [
+                        0.9288
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl2491.png",
+                    "score": 0.205924
+                },
+                "Cgl0828": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.136,
+                    "Reaction_ID": [
+                        "OHPBAT_reverse",
+                        "OHPBAT",
+                        "PSERT"
+                    ],
+                    "Uniprot_ID": "Q8NS51",
+                    "Gene_ID": "Cgl0828",
+                    "Enzyme_Cost": [
+                        0.4606
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl0828.png",
+                    "score": 0.081757
+                },
+                "Cgl1273": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.15,
+                    "Reaction_ID": [
+                        "KARA2",
+                        "KARA1_reverse",
+                        "KARA1",
+                        "KARA2_reverse"
+                    ],
+                    "Uniprot_ID": "Q57179",
+                    "Gene_ID": "Cgl1273",
+                    "Enzyme_Cost": [
+                        0.3877
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl1273.png",
+                    "score": 0.069268
+                },
+                "Cgl1397": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.067,
+                    "Reaction_ID": [
+                        "ACOTA",
+                        "ACOTA_reverse"
+                    ],
+                    "Uniprot_ID": "Q59282",
+                    "Gene_ID": "Cgl1397",
+                    "Enzyme_Cost": [
+                        0.3649
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl1397.png",
+                    "score": 0.062678
+                },
+                "Cgl0664": {
+                    "Modification": "Down",
+                    "Fold_Change": -2.114,
+                    "Reaction_ID": [
+                        "ICDHyr"
+                    ],
+                    "Uniprot_ID": "P50216",
+                    "Gene_ID": "Cgl0664",
+                    "Enzyme_Cost": [
+                        0.2316
+                    ],
+                    "figpath": "output/iCW773R_task/E_OptForce/target_fig/Cgl0664.png",
+                    "score": 0.040686
+                }
+            }
+        },
+        "combined": {
+            "summary": {
+                "UP": 0,
+                "Down": 46,
+                "KO": 2
+            },
+            "combined_up": "output/iCW773R_task/UP_modification.tsv",
+            "combined_down": "output/iCW773R_task/down_modification.tsv"
+        },
+        "combined_Enzyme": {
+            "summary": {
+                "UP": 2,
+                "Down": 6,
+                "KO": 0
+            },
+            "combined_Enzyme_up": "output/iCW773R_task/UP_modification_E.tsv",
+            "combined_Enzyme_down": "output/iCW773R_task/down_modification_E.tsv"
+        },
+        "Visualization": {
+            "FSEOF_escher_wild": "output/iCW773R_task/FSEOF/wildflux_map.json",
+            "FSEOF_escher_over": "output/iCW773R_task/FSEOF/overflux_map.json",
+            "FSEOF_escher_fc": "output/iCW773R_task/FSEOF/fcflux_map.json",
+            "FSEOF_d3flux_wild": "output/iCW773R_task/FSEOF/wild_d3flux.html",
+            "FSEOF_d3flux_over": "output/iCW773R_task/FSEOF/over_d3flux.html",
+            "FSEOF_d3flux_fc": "output/iCW773R_task/FSEOF/fc_d3flux.html",
+            "OptForce_escher_wild": "output/iCW773R_task/OptForce/wildflux_map.json",
+            "OptForce_escher_over": "output/iCW773R_task/OptForce/overflux_map.json",
+            "OptForce_escher_fc": "output/iCW773R_task/OptForce/fcflux_map.json",
+            "OptForce_d3flux_wild": "output/iCW773R_task/OptForce/wild_d3flux.html",
+            "OptForce_d3flux_over": "output/iCW773R_task/OptForce/over_d3flux.html",
+            "OptForce_d3flux_fc": "output/iCW773R_task/OptForce/fc_d3flux.html"
+        }
+    },
+    "overall_status": "success",
+    "errorstring": "",
+    "error_detail": {
+        "FSEOF": {
+            "target_prediction": 1,
+            "errorstring": ""
+        },
+        "loopless_optforce_MUST": {
+            "target_prediction": 1,
+            "errorstring": ""
+        },
+        "E_FSEOF": {
+            "target_prediction": 1,
+            "errorstring": ""
+        },
+        "E_OptForce": {
+            "target_prediction": 1,
+            "errorstring": ""
+        }
+    },
+    "map": "output/iCW773R_task/map.json",
+    "flux": "output/iCW773R_task/flux.json",
+    "up": "output/iCW773R_task/up.json",
+    "down": "output/iCW773R_task/down.json"
+}

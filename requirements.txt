@@ -1,0 +1,20 @@
+# Python 3.8 or newer. IBM CPLEX and Gurobi are separate installs; pass their
+# directories when the example starts. They are not installed by this file.
+cobra==0.30.0
+pandas==2.0.3
+numpy==1.24.4
+Pyomo==6.8.2
+equilibrator-api==0.4.7
+equilibrator-cache==0.4.3
+component-contribution==0.4.4
+json-repair==0.30.0
+d3flux==0.2.7
+openpyxl==3.1.5
+sympy==1.13.3
+requests==2.32.3
+matplotlib==3.7.5
+optlang==1.8.2
+scipy==1.10.1
+python-libsbml==5.20.4
+swiglpk==5.0.12
+Pint==0.21.1

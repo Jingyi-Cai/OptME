@@ -1,0 +1,30 @@
+3HAD100	0	3hdecACP_c --> h2o_c + tdec2eACP_c	(R)-3-Hydroxydecanoyl-[acyl-carrier protein] --> H2O + trans-Dec-2-enoyl-[acyl-carrier protein]	(0.0, 1000.0)	{}
+3HAD121	0	3hcddec5eACP_c --> h2o_c + t3c5ddeceACP_c	(R)-3-hydroxy-cis-dodec-5-enoyl-[acyl-carrier protein] --> H2O + trans-3-cis-5-dodecenoyl-[acyl-carrier protein]	(0.0, 1000.0)	{}
+3HAD141	0	3hcmrs7eACP_c --> h2o_c + t3c7mrseACP_c	(R)-3-hydroxy-cis-myristol-7-eoyl-[acyl-carrier protein] --> H2O + trans-3-cis-7-myristoleoyl-[acyl-carrier protein]	(0.0, 1000.0)	{}
+EAR121x	0	h_c + nadh_c + t3c5ddeceACP_c --> cddec5eACP_c + nad_c	H+ + Nicotinamide adenine dinucleotide - reduced + trans-3-cis-5-dodecenoyl-[acyl-carrier protein] --> cis-dodec-5-enoyl-[acyl-carrier protein] (n-C12:1) + Nicotinamide adenine dinucleotide	(0.0, 1000.0)	{}
+EAR141x	0	h_c + nadh_c + t3c7mrseACP_c --> nad_c + tdeACP_c	H+ + Nicotinamide adenine dinucleotide - reduced + trans-3-cis-7-myristoleoyl-[acyl-carrier protein] --> Nicotinamide adenine dinucleotide + cis-tetradec-7-enoyl-[acyl-carrier protein] (n-C14:1)	(0.0, 1000.0)	{}
+3OAR121	0	3ocddec5eACP_c + h_c + nadph_c --> 3hcddec5eACP_c + nadp_c	3-oxo-cis-dodec-5-enoyl-[acyl-carrier protein] + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> (R)-3-hydroxy-cis-dodec-5-enoyl-[acyl-carrier protein] + Nicotinamide adenine dinucleotide phosphate	(0.0, 1000.0)	{}
+3OAR141	0	3ocmrs7eACP_c + h_c + nadph_c --> 3hcmrs7eACP_c + nadp_c	3-oxo-cis-myristol-7-eoyl-[acyl-carrier protein] + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> (R)-3-hydroxy-cis-myristol-7-eoyl-[acyl-carrier protein] + Nicotinamide adenine dinucleotide phosphate	(0.0, 1000.0)	{}
+ADSL2r	0	25aics_c --> aicar_c + fum_c	(S)-2-[5-Amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate --> 5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide + Fumarate	(0.0, 1000.0)	{}
+AICART	0	10fthf_c + aicar_c --> fprica_c + thf_c	10-Formyltetrahydrofolate + 5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide --> 5-Formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide + 5,6,7,8-Tetrahydrofolate	(0.0, 1000.0)	{}
+AIRC2	0	air_c + atp_c + hco3_c --> 5caiz_c + adp_c + h_c + pi_c	5-amino-1-(5-phospho-D-ribosyl)imidazole + ATP + Bicarbonate --> 5-phosphoribosyl-5-carboxyaminoimidazole + ADP + H+ + Phosphate	(0.0, 1000.0)	{}
+GARFT	0	10fthf_c + gar_c --> fgam_c + h_c + thf_c	10-Formyltetrahydrofolate + N1-(5-Phospho-D-ribosyl)glycinamide --> N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide + H+ + 5,6,7,8-Tetrahydrofolate	(0.0, 1000.0)	{}
+GLUPRT	0	gln__L_c + h2o_c + prpp_c --> glu__L_c + ppi_c + pram_c	L-Glutamine + H2O + 5-Phospho-alpha-D-ribose 1-diphosphate --> L-Glutamate + Diphosphate + 5-Phospho-beta-D-ribosylamine	(0.0, 1000.0)	{}
+PRAGSr	0	atp_c + gly_c + pram_c --> adp_c + gar_c + h_c + pi_c	ATP + Glycine + 5-Phospho-beta-D-ribosylamine --> ADP + N1-(5-Phospho-D-ribosyl)glycinamide + H+ + Phosphate	(0.0, 1000.0)	{}
+PRAIS	0	atp_c + fpram_c --> adp_c + air_c + 2.0 h_c + pi_c	ATP + 2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine --> ADP + 5-amino-1-(5-phospho-D-ribosyl)imidazole + 2.0 H+ + Phosphate	(0.0, 1000.0)	{}
+PRASCSi	0	5aizc_c + asp__L_c + atp_c --> 25aics_c + adp_c + h_c + pi_c	5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate + L-Aspartate + ATP --> (S)-2-[5-Amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate + ADP + H+ + Phosphate	(0.0, 1000.0)	{}
+PRFGS	0	atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c	ATP + N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide + L-Glutamine + H2O --> ADP + 2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine + L-Glutamate + H+ + Phosphate	(0.0, 1000.0)	{}
+DHDPRy	0	23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c	2,3-Dihydrodipicolinate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> Nicotinamide adenine dinucleotide phosphate + 2,3,4,5-Tetrahydrodipicolinate	(0.0, 1000.0)	{}
+DHDPS	0	aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c	L-Aspartate 4-semialdehyde + Pyruvate --> 2,3-Dihydrodipicolinate + 2.0 H2O + H+	(0.0, 1000.0)	{}
+CHORS	0	3psme_c --> chor_c + pi_c	5-O-(1-Carboxyvinyl)-3-phosphoshikimate --> chorismate + Phosphate	(0.0, 1000.0)	{}
+DDPA	0	e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c	D-Erythrose 4-phosphate + H2O + Phosphoenolpyruvate --> 2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate + Phosphate	(0.0, 1000.0)	{}
+DHQS	0	2dda7p_c --> 3dhq_c + pi_c	2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate --> 3-Dehydroquinate + Phosphate	(0.0, 1000.0)	{}
+DHQTi	0	3dhq_c --> 3dhsk_c + h2o_c	3-Dehydroquinate --> 3-Dehydroshikimate + H2O	(0.0, 1000.0)	{}
+PSCVT	0	pep_c + skm5p_c --> 3psme_c + pi_c	Phosphoenolpyruvate + Shikimate 5-phosphate --> 5-O-(1-Carboxyvinyl)-3-phosphoshikimate + Phosphate	(0.0, 1000.0)	{}
+SHKK	0	atp_c + skm_c --> adp_c + h_c + skm5p_c	ATP + Shikimate --> ADP + H+ + Shikimate 5-phosphate	(0.0, 1000.0)	{}
+IPMD	0	3c2hmp_c + nad_c --> 3c4mop_c + h_c + nadh_c	3-Carboxy-2-hydroxy-4-methylpentanoate + Nicotinamide adenine dinucleotide --> 3-Carboxy-4-methyl-2-oxopentanoate + H+ + Nicotinamide adenine dinucleotide - reduced	(0.0, 1000.0)	{}
+IPPS	0	3mob_c + accoa_c + h2o_c --> 3c3hmp_c + coa_c + h_c	3-Methyl-2-oxobutanoate + Acetyl-CoA + H2O --> 3-Carboxy-3-hydroxy-4-methylpentanoate + Coenzyme A + H+	(0.0, 1000.0)	{}
+LEUTAi	0	4mop_c + glu__L_c --> akg_c + leu__L_c	4-Methyl-2-oxopentanoate + L-Glutamate --> 2-Oxoglutarate + L-Leucine	(0.0, 1000.0)	{}
+AIRC3_reverse	0	5caiz_c --> 5aizc_c	5-phosphoribosyl-5-carboxyaminoimidazole --> 5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate	(0.0, 1000.0)	{}
+IPPMIa_reverse	0	2ippm_c + h2o_c --> 3c2hmp_c	2-Isopropylmaleate + H2O --> 3-Carboxy-2-hydroxy-4-methylpentanoate	(0.0, 1000.0)	{}
+IPPMIb_reverse	0	3c3hmp_c --> 2ippm_c + h2o_c	3-Carboxy-3-hydroxy-4-methylpentanoate --> 2-Isopropylmaleate + H2O	(0.0, 1000.0)	{}

@@ -1,0 +1,42 @@
+pathway	reaction	rxn_name	gene_id	equation	Score_sum	target_number
+Cell Envelope Biosynthesis	3HAD100	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C10:0)	Cgl0289	3hdecACP_c --> h2o_c + tdec2eACP_c	2.0	FSEOF, OptForce
+Cell Envelope Biosynthesis	3HAD141	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C14:1)	Cgl0289	3hcmrs7eACP_c --> h2o_c + t3c7mrseACP_c	2.0	FSEOF, OptForce
+Cell Envelope Biosynthesis	3OAR141	3-oxoacyl-[acyl-carrier-protein] reductase (n-C14:1)	Cgl0286 and Cgl0744	3ocmrs7eACP_c + h_c + nadph_c --> 3hcmrs7eACP_c + nadp_c	2.0	FSEOF, OptForce
+Cell Envelope Biosynthesis	3OAR121	3-oxoacyl-[acyl-carrier-protein] reductase (n-C12:1)	Cgl0286 and Cgl0744	3ocddec5eACP_c + h_c + nadph_c --> 3hcddec5eACP_c + nadp_c	2.0	FSEOF, OptForce
+Cell Envelope Biosynthesis	3HAD121	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C12:1)	Cgl0289	3hcddec5eACP_c --> h2o_c + t3c5ddeceACP_c	2.0	FSEOF, OptForce
+Cell Envelope Biosynthesis	EAR121x	enoyl-[acyl-carrier-protein] reductase (NADH) (n-C12:1)	Cgl0719	h_c + nadh_c + t3c5ddeceACP_c --> cddec5eACP_c + nad_c	1.017	FSEOF
+Cell Envelope Biosynthesis	EAR141x	enoyl-[acyl-carrier-protein] reductase (NADH) (n-C14:1)	Cgl0719	h_c + nadh_c + t3c7mrseACP_c --> nad_c + tdeACP_c	1.017	FSEOF
+Cell Envelope Biosynthesis	3OAR40	3-oxoacyl-[acyl-carrier-protein] reductase (n-C4:0)	Cgl0286 and Cgl0744	actACP_c + h_c + nadph_c --> 3haACP_c + nadp_c	1.0	OptForce
+Cell Envelope Biosynthesis	3OAR100	3-oxoacyl-[acyl-carrier-protein] reductase (n-C10:0)	Cgl0286 and Cgl0744	3odecACP_c + h_c + nadph_c --> 3hdecACP_c + nadp_c	1.0	OptForce
+Cell Envelope Biosynthesis	3HAD80	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C8:0)	Cgl0289	3hoctACP_c --> h2o_c + toct2eACP_c	1.0	OptForce
+Cell Envelope Biosynthesis	3HAD60	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C6:0)	Cgl0289	3hhexACP_c --> h2o_c + thex2eACP_c	1.0	OptForce
+Cell Envelope Biosynthesis	3HAD40	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C4:0)	Cgl0289	3haACP_c --> but2eACP_c + h2o_c	1.0	OptForce
+Cell Envelope Biosynthesis	3HAD161	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C16:1)	Cgl0289	3hcpalm9eACP_c --> h2o_c + t3c9palmeACP_c	1.0	OptForce
+Cell Envelope Biosynthesis	3OAR60	3-oxoacyl-[acyl-carrier-protein] reductase (n-C6:0)	Cgl0286 and Cgl0744	3ohexACP_c + h_c + nadph_c --> 3hhexACP_c + nadp_c	1.0	OptForce
+Cell Envelope Biosynthesis	3OAR80	3-oxoacyl-[acyl-carrier-protein] reductase (n-C8:0)	Cgl0286 and Cgl0744	3ooctACP_c + h_c + nadph_c --> 3hoctACP_c + nadp_c	1.0	OptForce
+Cell Envelope Biosynthesis	3OAR161	3-oxoacyl-[acyl-carrier-protein] reductase (n-C16:1)	Cgl0286 and Cgl0744	3ocpalm9eACP_c + h_c + nadph_c --> 3hcpalm9eACP_c + nadp_c	1.0	OptForce
+Cell Envelope Biosynthesis	3HAD181	3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C18:1)	Cgl0289	3hcvac11eACP_c --> h2o_c + t3c11vaceACP_c	1.0	OptForce
+Cell Envelope Biosynthesis	3OAR181	3-oxoacyl-[acyl-carrier-protein] reductase (n-C18:1)	Cgl0286 and Cgl0744	3ocvac11eACP_c + h_c + nadph_c --> 3hcvac11eACP_c + nadp_c	1.0	OptForce
+Purine and Pyrimidine Biosynthesis	AIRC2	phosphoribosylaminoimidazole carboxylase	Cgl0711	air_c + atp_c + hco3_c --> 5caiz_c + adp_c + h_c + pi_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	ADSL2r	adenylosuccinate lyase	Cgl2598	25aics_c --> aicar_c + fum_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	AICART	phosphoribosylaminoimidazolecarboxamide formyltransferase	Cgl0861	10fthf_c + aicar_c --> fprica_c + thf_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	GARFT	phosphoribosylglycinamide formyltransferase	Cgl0860 and Cgl2759	10fthf_c + gar_c --> fgam_c + h_c + thf_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	GLUPRT	glutamine phosphoribosyldiphosphate amidotransferase	Cgl2584	gln__L_c + h2o_c + prpp_c --> glu__L_c + ppi_c + pram_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	PRAGSr	phosphoribosylglycinamide synthase	Cgl2600	atp_c + gly_c + pram_c --> adp_c + gar_c + h_c + pi_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	PRFGS	phosphoribosylformylglycinamidine synthase	Cgl2588 and Cgl2589 and Cgl2590	atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	PRASCSi	phosphoribosylaminoimidazolesuccinocarboxamide synthase	Cgl2597	5aizc_c + asp__L_c + atp_c --> 25aics_c + adp_c + h_c + pi_c	1.0	FSEOF
+Purine and Pyrimidine Biosynthesis	PRAIS	phosphoribosylaminoimidazole synthase	Cgl2583	atp_c + fpram_c --> adp_c + air_c + 2.0 h_c + pi_c	1.0	FSEOF
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	DHQTi	3-dehydroquinate dehydratase, irreversible	Cgl0423	3dhq_c --> 3dhsk_c + h2o_c	1.0	FSEOF
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	SHKK	shikimate kinase	Cgl1622	atp_c + skm_c --> adp_c + h_c + skm5p_c	1.0	FSEOF
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	PSCVT	3-phosphoshikimate 1-carboxyvinyltransferase	Cgl0764	pep_c + skm5p_c --> 3psme_c + pi_c	1.0	FSEOF
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	DHQS	3-dehydroquinate synthase	Cgl1621	2dda7p_c --> 3dhq_c + pi_c	1.0	FSEOF
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	DDPA	3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase	Cgl0990 and Cgl2178	e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c	1.0	FSEOF
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	CHORS	chorismate synthase	Cgl1623	3psme_c --> chor_c + pi_c	1.0	FSEOF
+Valine, Leucine, and Isoleucine Metabolism	LEUTAi	leucine transaminase (irreversible)	Cgl2204	4mop_c + glu__L_c --> akg_c + leu__L_c	1.0	FSEOF
+Valine, Leucine, and Isoleucine Metabolism	IPPS	2-isopropylmalate synthase	Cgl0248	3mob_c + accoa_c + h2o_c --> 3c3hmp_c + coa_c + h_c	1.0	FSEOF
+Valine, Leucine, and Isoleucine Metabolism	IPMD	3-isopropylmalate dehydrogenase	Cgl1286	3c2hmp_c + nad_c --> 3c4mop_c + h_c + nadh_c	1.0	FSEOF
+Threonine and Lysine Metabolism	DHDPS	dihydrodipicolinate synthase	Cgl1971	aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c	1.0	FSEOF
+Threonine and Lysine Metabolism	DHDPRy	dihydrodipicolinate reductase (NADPH)	Cgl1973	23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c	1.0	FSEOF
+others	IPPMIb_reverse	N/A	Cgl1315 and Cgl1316	3c3hmp_c --> 2ippm_c + h2o_c	1.0	FSEOF
+others	IPPMIa_reverse	N/A	Cgl1315 and Cgl1316	2ippm_c + h2o_c --> 3c2hmp_c	1.0	FSEOF
+others	AIRC3_reverse	N/A	Cgl0714	5caiz_c --> 5aizc_c	1.0	FSEOF

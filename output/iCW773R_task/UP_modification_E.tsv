@@ -1,0 +1,3 @@
+pathway	uniprot_id	Enzyme	reaction	Score_sum	Methods
+others	H7C7K2	Cgl0689	PYRC_reverse	2.0	E_FSEOF, E_OptForce
+others	H7C7K2	Cgl0689	PYRC	2.0	E_FSEOF, E_OptForce

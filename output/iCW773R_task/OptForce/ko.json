@@ -1,0 +1,24 @@
+{
+  "FUM": {
+    "reaction": "fum_c + h2o_c --> mal__L_c",
+    "wild_range": [
+      0.595,
+      21.885
+    ],
+    "eng_range": [
+      0.0,
+      0.0
+    ]
+  },
+  "ATPS4rpp": {
+    "reaction": "adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c",
+    "wild_range": [
+      23.023,
+      38.964
+    ],
+    "eng_range": [
+      0.0,
+      0.0
+    ]
+  }
+}

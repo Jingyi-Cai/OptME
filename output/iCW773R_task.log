@@ -1,0 +1,95 @@
+--- Running command: /home/leon/anaconda3/envs/pyenv/bin/python script/Error.py INPUT/model INPUT/task iCW773R_task ---
+Most similar reaction ID: None with similarity: 0
+Code: 100
+Description: pass
+write new model file success.
+--- Exit Code: 0 ---
+--- Elapsed: 1.703 s ---
+
+--- Running command: /home/leon/anaconda3/envs/pyenv/bin/python script/summary.py INPUT/model INPUT/task INPUT/map output iCW773R_task ---
+product_c_number: 4.0
+{'substrate': 'EX_glc_e', 'substrate_name': 'D-Glucose', 'min_growth': 10, 'ATPM': 6.86, 'oxygenstate': 'aerobic', 'email': 'user_without_email', 'taskname': ['FSEOF', 'loopless_optforce_MUST', 'E_FSEOF', 'E_OptForce'], 'excluded_rxns': [], 'O2': 'EX_o2_e', 'CO2_flag': 'False', 'model': 'ala_iCW.json', 'biomass': 'CG_biomass_cgl_ATCC13032', 'species': 'C.glutamicum', 'product': 'EX_fum_e', 'product_name': 'Fumarate', 'ID': 'iCW773R', 'yield_na': False, 'yield_na_reason': '', 'substrate_uptake_rate': 10}
+FSEOF
+['/home/leon/anaconda3/envs/pyenv/bin/python', 'script/target.py', 'INPUT/model', 'INPUT/task', 'INPUT/map', 'output', 'iCW773R_task']
+METHOD_RUNTIME	FSEOF	14.444	ok
+Method FSEOF runtime: 14.4 s (ok)
+loopless_optforce_MUST
+['/home/leon/anaconda3/envs/pyenv/bin/python', 'script/target.py', 'INPUT/model', 'INPUT/task', 'INPUT/map', 'output', 'iCW773R_task']
+METHOD_RUNTIME	loopless_optforce_MUST	763.491	ok
+Method loopless_optforce_MUST runtime: 763.5 s (ok)
+E_FSEOF
+['/home/leon/anaconda3/envs/pyenv/bin/python', 'script/EToptme.py', 'INPUT/model', 'INPUT/task', 'INPUT/map', 'output', 'iCW773R_task']
+METHOD_RUNTIME	E_FSEOF	44.225	ok
+Method E_FSEOF runtime: 44.2 s (ok)
+E_OptForce
+['/home/leon/anaconda3/envs/pyenv/bin/python', 'script/EToptme.py', 'INPUT/model', 'INPUT/task', 'INPUT/map', 'output', 'iCW773R_task']
+METHOD_RUNTIME	E_OptForce	505.571	ok
+Method E_OptForce runtime: 505.6 s (ok)
+Combined results saved to output/iCW773R_task/output.json.
+=== Method runtime ===
+  FSEOF                                     00:14        14.4 s  ok
+  loopless_optforce_MUST                    12:43       763.5 s  ok
+  E_FSEOF                                   00:44        44.2 s  ok
+  E_OptForce                                08:25       505.6 s  ok
+  methods total                             22:07      1327.7 s
+--- Exit Code: 0 ---
+--- Elapsed: 1330.513 s ---
+
+--- Running command: /home/leon/anaconda3/envs/pyenv/bin/python script/outputjson_status.py INPUT/task output iCW773R_task ---
+--- Exit Code: 0 ---
+--- Elapsed: 0.335 s ---
+
+--- Running command: /home/leon/anaconda3/envs/pyenv/bin/python script/sum.py INPUT/model INPUT/task INPUT/map output iCW773R_task ---
+['FSEOF', 'loopless_optforce_MUST', 'E_FSEOF', 'E_OptForce']
+['FSEOF', 'loopless_optforce_MUST', 'E_FSEOF', 'E_OptForce']
+Unexpected error: not enough values to unpack (expected 3, got 0)
+['E_FSEOF', 'E_OptForce']
+['FSEOF', 'loopless_optforce_MUST', 'E_FSEOF', 'E_OptForce']
+ok
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+Gene ID 'and' not found in the model.
+--- Exit Code: 0 ---
+--- Elapsed: 2.822 s ---
+
+
+=== Runtime summary ===
+Methods:
+  FSEOF                                     00:14        14.4 s  ok
+  loopless_optforce_MUST                    12:43       763.5 s  ok
+  E_FSEOF                                   00:44        44.2 s  ok
+  E_OptForce                                08:25       505.6 s  ok
+  methods total                             22:07      1327.7 s
+Pipeline steps:
+  Step 1: Pre-check (Error.py)              00:01         1.7 s  ok
+  Step 2: summary.py                        22:10      1330.5 s  ok
+  Step 3: outputjson_status.py              00:00         0.3 s  ok
+  Step 4: sum.py                            00:02         2.8 s  ok
+  pipeline total                            22:15      1335.4 s
+
