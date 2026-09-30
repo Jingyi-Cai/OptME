@@ -1,0 +1,4 @@
+Gene_Name	Enzyme_Name	Modification	Fold_change	Reaction_Name	Reaction Formula	Type	Rationale
+hom	homoserine dehydrogenase	Down		hom		Enzymatic	Downregulating homoserine dehydrogenase reduces drain of aspartate semialdehyde toward threonine/methionine, and lowers intracellular threonine pools, which synergistically weakens feedback inhibition on aspartate kinase.
+thrB	homoserine kinase	Down		thrB	4hthr_c + atp_c --> adp_c + h_c + phthr_c	Enzymatic	Partial attenuation of thrB prevents threonine over-accumulation and avoids back-conversion/repressive effects on the aspartate kinase reaction, improving net lysine flux.
+pck	PEP carboxykinase	Down		pck	atp_c + oaa_c --> adp_c + co2_c + pep_c	Enzymatic	Reducing PEP carboxykinase activity prevents decarboxylation of oxaloacetate back to PEP during gluconeogenesis, conserving carbon and energy (ATP) and increasing oxaloacetate availability for the aspartate/lysine pathway.

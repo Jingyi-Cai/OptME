@@ -1,3 +1,14 @@
 pathway	uniprot_id	Enzyme	reaction	Score_sum	Methods
-others	H7C7K2	Cgl0689	PYRC_reverse	2.0	E_FSEOF, E_OptForce
-others	H7C7K2	Cgl0689	PYRC	2.0	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	P26512	Cgl0251	ASPK	1.42	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	Q8NP73	Cgl1943	DAPE	1.0	E_FSEOF
+Threonine and Lysine Metabolism	Q8NS65	Cgl0814	SDPTA	0.904	E_FSEOF
+Threonine and Lysine Metabolism	Q59284	Cgl1109	SDPDS	0.904	E_FSEOF
+Threonine and Lysine Metabolism	P19808	Cgl1971	DHDPS	0.904	E_FSEOF
+Threonine and Lysine Metabolism	P0C1D8	Cgl0252	ASAD	0.478	E_FSEOF
+others	P26512	Cgl0251	ASPK_reverse	1.42	E_FSEOF, E_OptForce
+others	Q8NP73	Cgl1943	DAPE_reverse	1.0	E_FSEOF
+others	H7C7K2	Cgl0689	PYRC_reverse	1.0	E_OptForce
+others	H7C7K2	Cgl0689	PYRC	1.0	E_OptForce
+others	Q8NS65	Cgl0814	SDPTA_reverse	0.904	E_FSEOF
+others	P0C1D8	Cgl0252	ASAD_reverse	0.478	E_FSEOF
+Citric Acid Cycle	Q8NTE1, Q8NRC3, Q8NNJ2	Cgl0366 and Cgl1129 and Cgl2207	AKGDH	0.67	E_OptForce

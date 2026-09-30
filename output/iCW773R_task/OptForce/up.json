@@ -1,1 +1,57 @@
-{}
+{
+  "ASPK": {
+    "reaction": "asp__L_c + atp_c --> 4pasp_c + adp_c",
+    "wild_range": [
+      0.329,
+      0.969
+    ],
+    "eng_range": [
+      3.135,
+      3.71
+    ]
+  },
+  "DAPDH": {
+    "reaction": "2.0 h_c + nadph_c + nh4_c + thdp_c --> 26dap__M_c + nadp_c",
+    "wild_range": [
+      0.0,
+      0.492
+    ],
+    "eng_range": [
+      0.648,
+      3.453
+    ]
+  },
+  "DHDPRy": {
+    "reaction": "23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c",
+    "wild_range": [
+      0.099,
+      0.492
+    ],
+    "eng_range": [
+      3.109,
+      3.453
+    ]
+  },
+  "DHDPS": {
+    "reaction": "aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c",
+    "wild_range": [
+      0.099,
+      0.492
+    ],
+    "eng_range": [
+      3.109,
+      3.453
+    ]
+  },
+  "ASAD_reverse": {
+    "reaction": "4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c",
+    "wild_range": [
+      0.329,
+      0.969
+    ],
+    "eng_range": [
+      3.135,
+      3.71
+    ]
+  }
+}

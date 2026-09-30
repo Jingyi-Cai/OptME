@@ -1,0 +1,75 @@
+{
+    "summary": {
+        "UP": 3,
+        "Down": 3,
+        "KO": 0
+    },
+    "genes": {
+        "lysC": {
+            "Reaction Formula": "asp__L_c + atp_c <=> 4pasp_c + adp_c",
+            "Type": "Enzymatic",
+            "Modification": "UP",
+            "Fold_change": "",
+            "Reaction_Name": "lysC",
+            "Rationale": "Overexpress a feedback-resistant mutant (e.g., lysC^T311I) to relieve allosteric inhibition by L-lysine and L-threonine, removing the primary bottleneck at the entry of the aspartate-derived lysine pathway.",
+            "Gene_Name": "lysC",
+            "Enzyme_Name": "aspartate kinase",
+            "score": ""
+        },
+        "dapA": {
+            "Reaction Formula": "aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c",
+            "Type": "Enzymatic",
+            "Modification": "UP",
+            "Fold_change": "",
+            "Reaction_Name": "dapA",
+            "Rationale": "Dihydrodipicolinate synthase catalyzes the first committed step toward L-lysine/DAP; strengthening this branch-point enzyme increases carbon flux from aspartate semialdehyde toward lysine biosynthesis.",
+            "Gene_Name": "dapA",
+            "Enzyme_Name": "dihydrodipicolinate synthase",
+            "score": ""
+        },
+        "hom": {
+            "Reaction Formula": "",
+            "Type": "Enzymatic",
+            "Modification": "Down",
+            "Fold_change": "",
+            "Reaction_Name": "hom",
+            "Rationale": "Downregulating homoserine dehydrogenase reduces drain of aspartate semialdehyde toward threonine/methionine, and lowers intracellular threonine pools, which synergistically weakens feedback inhibition on aspartate kinase.",
+            "Gene_Name": "hom",
+            "Enzyme_Name": "homoserine dehydrogenase",
+            "score": ""
+        },
+        "thrB": {
+            "Reaction Formula": "4hthr_c + atp_c --> adp_c + h_c + phthr_c",
+            "Type": "Enzymatic",
+            "Modification": "Down",
+            "Fold_change": "",
+            "Reaction_Name": "thrB",
+            "Rationale": "Partial attenuation of thrB prevents threonine over-accumulation and avoids back-conversion/repressive effects on the aspartate kinase reaction, improving net lysine flux.",
+            "Gene_Name": "thrB",
+            "Enzyme_Name": "homoserine kinase",
+            "score": ""
+        },
+        "pyc": {
+            "Reaction Formula": "",
+            "Type": "Enzymatic",
+            "Modification": "UP",
+            "Fold_change": "",
+            "Reaction_Name": "pyc",
+            "Rationale": "Overexpressing pyruvate carboxylase increases anaplerotic replenishment of oxaloacetate from pyruvate, supplying the carbon skeleton needed to support high-level lysine biosynthesis under aerobic glucose metabolism.",
+            "Gene_Name": "pyc",
+            "Enzyme_Name": "pyruvate carboxylase",
+            "score": ""
+        },
+        "pck": {
+            "Reaction Formula": "atp_c + oaa_c --> adp_c + co2_c + pep_c",
+            "Type": "Enzymatic",
+            "Modification": "Down",
+            "Fold_change": "",
+            "Reaction_Name": "pck",
+            "Rationale": "Reducing PEP carboxykinase activity prevents decarboxylation of oxaloacetate back to PEP during gluconeogenesis, conserving carbon and energy (ATP) and increasing oxaloacetate availability for the aspartate/lysine pathway.",
+            "Gene_Name": "pck",
+            "Enzyme_Name": "PEP carboxykinase",
+            "score": ""
+        }
+    }
+}

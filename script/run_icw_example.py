@@ -2,7 +2,7 @@
 """
 Author: Jingyi Cai (2024-2026)
 Function: Run the C. glutamicum iCW773 single-task pipeline. Asks for the solver, optional solver parameters, and optional LLM settings, then calls Error.py, summary.py, outputjson_status.py, and sum.py.
-Input: Environment variables OPTME_SOLVER_PATH, OPTME_SOLVER, and optional OPTME_SOLVER_OPTIONS. Optional OPTME_LLM_MODEL, OPTME_LLM_BASE, and OPTME_LLM_KEY. Task file INPUT/task/iCW773R_task.json, plus INPUT/model and INPUT/map.
+Input: Environment variables OPTME_SOLVER_PATH and OPTME_SOLVER. Optional OPTME_SOLVER_OPTIONS holds extra solver parameters such as a time limit. Thread count is chosen from the CPU count. Optional OPTME_LLM_MODEL, OPTME_LLM_BASE, and OPTME_LLM_KEY. Optional OPTME_METHODS limits the run to a comma-separated subset, for example iBridge,llm. Task file INPUT/task/iCW773R_task.json, plus INPUT/model and INPUT/map.
 Output: Method results under output/iCW773R_task/ and a runtime log at output/iCW773R_task.log.
 """
 import os
@@ -27,6 +27,8 @@ from task_config import (  # noqa: E402
 import json
 import subprocess
 import time
+
+from solver_budget import use_sequential_threads
 
 SEP = "=" * 60
 TASK_FILE = "iCW773R_task.json"
@@ -295,7 +297,7 @@ def parse_solver_options(raw):
             continue
         if "=" not in item:
             raise ValueError(
-                "Solver parameters must look like threads=4,timelimit=3600 or a JSON object."
+                "Solver parameters must look like timelimit=3600 or a JSON object."
             )
         key, value = item.split("=", 1)
         key = key.strip()
@@ -305,14 +307,24 @@ def parse_solver_options(raw):
     return options
 
 
+def _drop_thread_options(options):
+    """Thread count is chosen from the CPU count, not from the user."""
+    removed = False
+    for key in ("threads", "Threads"):
+        if key in options:
+            options.pop(key)
+            removed = True
+    return removed
+
+
 def ask_solver_selection():
     """Choose which installed solver to use, then optional solver parameters."""
     found = [name for name in os.environ.get("OPTME_SOLVERS_FOUND", "").split(",") if name]
     print()
     print("  The same solver is used for FSEOF, OptForce, and the enzyme LPs.")
     print("  Installed solvers: " + ", ".join(found))
-    print("  Parameters are optional. Example: threads=4,timelimit=3600")
-    print("  Leave parameters blank to keep the solver defaults.")
+    print("  Thread count is chosen from the number of CPUs.")
+    print("  Extra parameters are optional. Example: timelimit=3600")
     print()
 
     preset = (
@@ -344,22 +356,28 @@ def ask_solver_selection():
                 break
             print("  Choose one of: " + ", ".join(found))
         while True:
-            options_raw = prompt("  Solver parameters", "") or ""
+            options_raw = prompt("  Extra solver parameters", "") or ""
             try:
                 options = parse_solver_options(options_raw)
                 break
             except (ValueError, json.JSONDecodeError) as exc:
                 print(f"  ERROR: {exc}")
 
+    if _drop_thread_options(options):
+        print("  Thread count is set automatically and was not taken from the parameters.")
+    if options:
+        os.environ["OPTME_SOLVER_OPTIONS"] = json.dumps(options)
+    else:
+        os.environ.pop("OPTME_SOLVER_OPTIONS", None)
+    n = use_sequential_threads()
     os.environ["OPTME_SOLVER"] = preset
     os.environ["OPTME_COBRA_SOLVER"] = preset
     os.environ["OPTME_PYOMO_SOLVER"] = preset
-    if options:
-        os.environ["OPTME_SOLVER_OPTIONS"] = json.dumps(options)
-        print(f"  Using solver {preset} with parameters {os.environ['OPTME_SOLVER_OPTIONS']}")
-    else:
-        os.environ.pop("OPTME_SOLVER_OPTIONS", None)
-        print(f"  Using solver {preset} with default parameters.")
+    print(f"  Using solver {preset} with parameters {os.environ['OPTME_SOLVER_OPTIONS']}")
+    print(
+        f"  CPUs: {n}. A single solve uses {n} threads. "
+        f"Parallel enzyme LPs use {n} processes with 1 thread each."
+    )
     return True
 
 
@@ -460,18 +478,41 @@ def configure_dirs(default_task_dir, default_model_dir, default_map_dir, default
     return task_dir, model_dir, map_dir, output_dir
 
 
-def review_and_confirm(job_id, task_dir, model_dir, map_dir, output_dir, methods):
-    """Show a final summary and ask for confirmation before running."""
+def _task_value(task, key):
+    value = task.get(key, "")
+    if value is None or value == "" or value == []:
+        return "(none)"
+    return value
+
+
+def review_and_confirm(job_id, task, task_dir, model_dir, map_dir, output_dir, methods):
+    """Show the task inputs and ask for confirmation before running."""
+    task_path = os.path.join(task_dir, TASK_FILE)
+    excluded = task.get("excluded_rxns") or []
+    if isinstance(excluded, (list, tuple)):
+        excluded_text = "(none)" if not excluded else ", ".join(str(item) for item in excluded)
+    else:
+        excluded_text = str(excluded)
     print(f"\n{SEP}")
     print("Step 4 / 4  —  Review & Run")
     print(SEP)
-    print(f"  Job ID     : {job_id}")
-    print(f"  Organism   : C. glutamicum (iCW773)")
+    print(f"  Task file  : {task_path}")
+    print("  Edit this file and start again if any of the following is not the case you want.")
+    print(f"  Substrate  : {_task_value(task, 'substrate')} ({_task_value(task, 'substrate_name')})")
+    print(f"  Uptake     : {_task_value(task, 'substrate_uptake_rate')} mmol/gDW/h")
+    print(f"  Product    : {_task_value(task, 'product')} ({_task_value(task, 'product_name')})")
+    print(f"  Biomass    : {_task_value(task, 'biomass')}")
+    print(f"  Min growth : {_task_value(task, 'min_growth')}")
+    print(f"  ATPM       : {_task_value(task, 'ATPM')}")
+    print(f"  Oxygen     : {_task_value(task, 'oxygenstate')} ({_task_value(task, 'O2')})")
+    print(f"  Model      : {_task_value(task, 'model')}")
+    print(f"  Species    : {_task_value(task, 'species')} ({_task_value(task, 'ID')})")
+    print(f"  Excluded   : {excluded_text}")
     print(f"  Methods    : {', '.join(methods)}")
+    print(f"  Job ID     : {job_id}")
     print(f"  Solver path: {os.environ.get('OPTME_SOLVER_PATH', '')}")
     print(f"  Solver     : {os.environ.get('OPTME_SOLVER', '')}")
     print(f"  Parameters : {os.environ.get('OPTME_SOLVER_OPTIONS', '(defaults)')}")
-    print(f"  Task dir   : {task_dir}")
     print(f"  Model dir  : {model_dir}")
     print(f"  Map dir    : {map_dir}")
     print(f"  Output dir : {output_dir}")
@@ -496,7 +537,6 @@ def main():
     print("  OptME  —  C. glutamicum iCW example")
     print(SEP)
     print("  Task file : " + TASK_FILE)
-    print("  Product   : fumarate from D-glucose (aerobic)")
 
     task_path = os.path.join(TASK_DIR, TASK_FILE)
     if not os.path.isfile(task_path):
@@ -519,6 +559,12 @@ def main():
     methods = task.get("taskname", [])
     if isinstance(methods, str):
         methods = [methods]
+    only_raw = os.environ.get("OPTME_METHODS", "").strip()
+    if only_raw:
+        wanted = [part.strip() for part in only_raw.split(",") if part.strip()]
+        methods = [name for name in methods if name in wanted]
+        task["taskname"] = methods
+        print("  Methods limited to: " + ", ".join(methods))
     if not methods:
         print("  No methods left to run.")
         _write_bytes(task_path, original_task)
@@ -533,7 +579,7 @@ def main():
         _write_bytes(task_path, original_task)
         return 1
 
-    if not review_and_confirm(JOB_ID, task_dir, model_dir, map_dir, output_dir, methods):
+    if not review_and_confirm(JOB_ID, task, task_dir, model_dir, map_dir, output_dir, methods):
         print("  Aborted by user.")
         _write_bytes(task_path, original_task)
         return 1

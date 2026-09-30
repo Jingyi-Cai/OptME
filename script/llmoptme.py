@@ -130,9 +130,19 @@ def summarize_genes(genes):
     return summary
 
 
+def _chat_completions_url(base):
+    """Accept either https://host/v1 or a host without the version prefix."""
+    base = (base or "").rstrip("/")
+    if base.endswith("/chat/completions"):
+        return base
+    if base.endswith("/v1"):
+        return base + "/chat/completions"
+    return base + "/v1/chat/completions"
+
+
 def call_llm(setup_text, inputdic):
     """Send the metabolic engineering prompt to the LLM and return parsed result."""
-    url = f"{LLM_API_BASE}/v1/chat/completions"
+    url = _chat_completions_url(LLM_API_BASE)
     headers = {
         "Authorization": f"Bearer {LLM_API_KEY}",
         "Content-Type": "application/json",
@@ -182,10 +192,14 @@ def call_llm(setup_text, inputdic):
 
         # New API frequently returns 503 when shared CPU is overloaded.
         # Retry with backoff so batch tasks can eventually get a response.
-        if resp.status_code == 503 and _attempt < _max_retries:
+        if resp.status_code in (400, 422) and "response_format" in payload:
+            print("[llmoptme] API rejected response_format; retrying without it.", flush=True)
+            payload.pop("response_format", None)
+            continue
+        if resp.status_code in (429, 503) and _attempt < _max_retries:
             _sleep_s = _retry_delay * _attempt
             print(
-                f"[llmoptme] HTTP 503 (attempt {_attempt}/{_max_retries}), retrying in {_sleep_s}s: {err_body}",
+                f"[llmoptme] HTTP {resp.status_code} (attempt {_attempt}/{_max_retries}), retrying in {_sleep_s}s: {err_body}",
                 flush=True,
             )
             _time.sleep(_sleep_s)

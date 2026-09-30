@@ -8,6 +8,7 @@ Output: <results_dir>/<task_id>/E_FSEOF/ or E_OptForce/, including output.json, 
 import sys
 # sys.path.append('/hpcfs/fhome/xuwenqi/project/ET-OptME_websit')
 from modelbuilder import *
+from solver_budget import cpu_budget, install_cobra_threads, use_parallel_lp_threads, use_sequential_threads
 import pandas as pd
 import cobra
 import json
@@ -625,6 +626,7 @@ def calculate_biomass(Concretemodel_Need_Data,inputdic,model):
 
 
 def calculate_wildrange(Concretemodel_Need_Data,obj_name,inputdic): 
+    use_parallel_lp_threads()
     results = {}
     constr_coeff = {}
     constr_coeff['fix_reactions'] = {} 
@@ -718,6 +720,7 @@ def calculate_product(Concretemodel_Need_Data,inputdic):
 
 
 def calculate_over(Concretemodel_Need_Data,obj_name,inputdic):
+    use_parallel_lp_threads()
     results = {}
     constr_coeff={}
     constr_coeff['fix_reactions']={} 
@@ -2158,7 +2161,16 @@ def drawtarget(data,mode,savepath='./'):
         # clear the fig
         plt.clf() 
 
+def _enzyme_range_pool():
+    """One process per CPU, one thread inside each CPLEX."""
+    n = cpu_budget()
+    print(f"Enzyme range LPs: {n} processes, 1 thread each")
+    return multiprocessing.Pool(processes=n, initializer=use_parallel_lp_threads)
+
+
 if __name__=="__main__":
+    use_sequential_threads()
+    install_cobra_threads()
     solver_name = os.environ.get("OPTME_PYOMO_SOLVER") or os.environ.get("OPTME_COBRA_SOLVER") or "cplex"
     cobra.Configuration().solver = os.environ.get("OPTME_COBRA_SOLVER", solver_name)
     print(f"Enzyme LP solver: {solver_name}")
@@ -2184,7 +2196,7 @@ if __name__=="__main__":
         B_value1,v0_biomass,bio,totalE,objvalue2 = calculate_biomass(Concretemodel_Need_Data,inputdic,model)
         enzyme_list = list(Concretemodel_Need_Data['mw_dict'].keys()) 
         obj_names = enzyme_list
-        pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
+        pool = _enzyme_range_pool()
 
         results = pool.starmap(calculate_wildrange, [(Concretemodel_Need_Data,obj_name,inputdic) for obj_name in obj_names])
 
@@ -2205,7 +2217,7 @@ if __name__=="__main__":
         B_value2,v1_product_max,pro,totalE2,EcoECM_FBA_protainmodel_B2 = calculate_product(Concretemodel_Need_Data,inputdic)
         enzyme_list = list(Concretemodel_Need_Data['mw_dict'].keys()) 
         obj_names = enzyme_list
-        pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
+        pool = _enzyme_range_pool()
 
         results = pool.starmap(calculate_over, [(Concretemodel_Need_Data,obj_name,inputdic) for obj_name in obj_names])
 

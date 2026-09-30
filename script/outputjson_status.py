@@ -39,6 +39,8 @@ if __name__ == "__main__":
     with open(os.path.join(path_task, taskname) + '.json', encoding='utf-8') as fp:
         inputdic = json.load(fp)
     method = inputdic['taskname']
+    if isinstance(method, str):
+        method = [method]
 
     taskidmap = {
         'FSEOF': 'FSEOF',

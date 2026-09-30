@@ -10,6 +10,7 @@ import cobra
 import cProfile
 # sys.path.append('/home/sun/ETGEMS-10.20')
 from modelbuilder import *
+from solver_budget import install_cobra_threads, use_sequential_threads
 import copy
 from cobra import Model, Reaction, Metabolite
 from sympy import subsets
@@ -571,10 +572,10 @@ def run_metabolic_tasks(path_results, path_task, path_model, path_map, taskname)
             "KO": int(summary.get("KO", 0)),
         }
 
-    # Iterate through taskname methods
+    # Iterate through taskname methods. A string is one method, not a sequence of characters.
     print(inputdic)
     method_times = []
-    for method in inputdic['taskname']:
+    for method in methods:
 
         # Set taskname to the current method
         inputdic_tmp['taskname'] = method
@@ -621,6 +622,9 @@ def run_metabolic_tasks(path_results, path_task, path_model, path_map, taskname)
                 path_results,
                 taskname
             ]
+        else:
+            print(f"Warning: unknown method '{method}', skipping.")
+            continue
         print(command)
         # Execute the command and capture output
         method_name = method
@@ -817,6 +821,8 @@ if __name__=="__main__":
     path_results3=os.path.join(path_results2, "iBridge")
     if not os.path.exists(path_results2):
         os.makedirs(path_results2)
+    use_sequential_threads()
+    install_cobra_threads()
     cobra.Configuration().solver = os.environ.get("OPTME_COBRA_SOLVER", "cplex")
     model,inputdic = prepare_model(path_model,path_task,taskname)
     v0_biomass =  biomass(inputdic,model)
@@ -843,8 +849,12 @@ if __name__=="__main__":
         degree_bio,degree_C_bio =reduced_degree(model,inputdic['substrate'])
     run_metabolic_tasks(path_results, path_task, path_model, path_map, taskname)
 
+    task_methods = inputdic['taskname']
+    if isinstance(task_methods, str):
+        task_methods = [task_methods]
+
     try:
-        if "iBridge" in inputdic['taskname'] :
+        if "iBridge" in task_methods:
             model_pfba_solution = reaction_list_d3(model,inputdic)
             with open(os.path.join(path_results3, 'fcflux_map.json'),encoding='utf-8') as fp:
                 reactions_with_ranges=json.load(fp)    
@@ -855,7 +865,7 @@ if __name__=="__main__":
     # Generate fc_d3flux.html for FSEOF and OptForce
     _fc_gen = {"FSEOF": "FSEOF", "loopless_optforce_MUST": "OptForce"}
     for _task_m, _folder in _fc_gen.items():
-        if _task_m not in inputdic['taskname']:
+        if _task_m not in task_methods:
             continue
         _method_dir = os.path.join(path_results2, _folder)
         _fc_json = os.path.join(_method_dir, "fcflux_map.json")
@@ -882,7 +892,7 @@ if __name__=="__main__":
             print(f"Generated fc_d3flux.html for {_folder}")
         except Exception as _e:
             print(f"Warning: fc_d3flux generation for {_folder} failed: {_e}")
-    methods = inputdic['taskname']
+    methods = task_methods
 
     # --- Post-run validation ---
     taskidmap = {

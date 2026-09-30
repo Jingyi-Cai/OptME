@@ -1,4 +1,4 @@
-# OptME example: *Corynebacterium glutamicum* iCW773
+# OptME example
 
 Standalone example of the OptME single-task pipeline for the *C. glutamicum* genome-scale model iCW773. The case produces fumarate from aerobic D-glucose and runs FSEOF, loopless OptForce (MUST), enzyme-constrained FSEOF, enzyme-constrained OptForce, and an optional LLM target method.
 
@@ -75,13 +75,13 @@ Install [IBM CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio)
 From the example directory, with CPLEX and four threads. Clearing the LLM variables skips the `llm` method. The other methods still run.
 
 ```bash
-cd "/path/to/example_in_paper" && \
+cd "/path/to/OptME" && \
 unset OPTME_LLM_MODEL OPTME_LLM_BASE OPTME_LLM_KEY LLM_API_KEY LLM_API_BASE LLM_MODEL_NAME && \
 OPTME_SOLVER_PATH="/opt/ibm/ILOG/CPLEX_Studio221" \
 OPTME_SOLVER="cplex" \
 OPTME_SOLVER_OPTIONS="threads=4" \
 MPLBACKEND=Agg \
-/home/leon/anaconda3/envs/pyenv/bin/python -u script/run_icw_example.py
+/path/to/python_interpreter -u script/run_icw_example.py
 ```
 
 `OPTME_SOLVER_PATH` is a CPLEX Studio directory, a Gurobi `linux64` directory, or both separated by `:`. `OPTME_SOLVER` is `cplex` or `gurobi`. `OPTME_SOLVER_OPTIONS` is optional; `threads=4,timelimit=3600` is the same form. To run `llm` as well, export `OPTME_LLM_MODEL`, `OPTME_LLM_BASE`, and `OPTME_LLM_KEY` instead of unsetting them. Those values stay in the process environment and are not written into the repository.

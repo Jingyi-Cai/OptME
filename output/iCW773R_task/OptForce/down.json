@@ -174,5 +174,16 @@
       0.011,
       0.011
     ]
+  },
+  "ATPS4rpp": {
+    "reaction": "adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c",
+    "wild_range": [
+      23.023,
+      38.964
+    ],
+    "eng_range": [
+      2.461,
+      19.362
+    ]
   }
 }

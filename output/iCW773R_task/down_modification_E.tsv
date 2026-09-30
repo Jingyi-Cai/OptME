@@ -1,48 +1,44 @@
 pathway	uniprot_id	Enzyme	reaction	Score_sum	Methods
-others	Q8NMS4	Cgl2491	KAS14_num1	2.0	E_OptForce
-others	Q8NMS4	Cgl2491	KAS15_num1	2.0	E_OptForce
-others	Q8NMS4	Cgl2491	AACPS4_num1		E_OptForce
+others	Q8NMS4	Cgl2491	3OAS120_num1	1.42	E_OptForce
+others	Q8NMS4	Cgl2491	ACPS1_num1	1.0	E_OptForce
+others	Q8NMS4	Cgl2491	KAS15_num1	0.904	E_OptForce
+others	Q8NMS4	Cgl2491	AACPS4_num1	0.904	E_OptForce
+others	Q8NMS4	Cgl2491	AACPS3_num1	0.904	E_OptForce
+others	Q8NMS4	Cgl2491	3OAS141_num1	0.478	E_OptForce
+others	Q8NMS4	Cgl2491	AACPS7_num1	1.42	E_OptForce
+others	Q8NMS4	Cgl2491	3OAS60_num1	1.0	E_OptForce
+others	Q8NMS4	Cgl2491	3OAS180_num1	1.0	E_OptForce
+others	Q8NMS4	Cgl2491	3OAS140_num1	1.0	E_OptForce
+others	Q8NMS4	Cgl2491	3OAS80_num1	0.904	E_OptForce
+others	Q8NMS4	Cgl2491	3OAS121_num1	0.478	E_OptForce
+others	Q8NMS4	Cgl2491	AACPS8_num1	0.67	E_OptForce
+others	Q8NMS4	Cgl2491	AACPS1_num1		E_OptForce
+others	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIb_reverse		E_OptForce
+others	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIa_reverse		E_OptForce
+others	Q8NS51	Cgl0828	OHPBAT_reverse		E_OptForce
+others	Q57179	Cgl1273	KARA1_reverse		E_OptForce
+others	Q57179	Cgl1273	KARA2_reverse		E_OptForce
+others	Q59282	Cgl1397	ACOTA_reverse		E_OptForce
 others	Q8NMS4	Cgl2491	3OAS160_num1		E_OptForce
-others	Q8NMS4	Cgl2491	AACPS5_num1		E_OptForce
+others	Q8NR51, H7C6C1, Q79VG9, Q7DIC8, Q79VG7, Q79VG6, P42464, Q9ETA7	Cgl1206 and Cgl1207 and Cgl1208 and Cgl1209 and Cgl1210 and Cgl1211 and Cgl1212 and Cgl1213	ATPS4rpp_reverse		E_OptForce
 others	Q8NMS4	Cgl2491	AACPS9_num1		E_OptForce
 others	Q8NMS4	Cgl2491	AACPS2_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS100_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS60_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS141_num1		E_OptForce
-others	Q8NMS4	Cgl2491	ACPS1_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS80_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS120_num1		E_OptForce
-others	Q8NMS4	Cgl2491	AACPS6_num1		E_OptForce
-others	Q8NMS4	Cgl2491	AACPS7_num1		E_OptForce
-others	Q57179	Cgl1273	KARA2_reverse		E_OptForce
-others	Q57179	Cgl1273	KARA1_reverse		E_OptForce
-others	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIa_reverse		E_OptForce
-others	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIb_reverse		E_OptForce
-others	Q8NS51	Cgl0828	OHPBAT_reverse		E_OptForce
-others	Q59282	Cgl1397	ACOTA_reverse		E_OptForce
-others	P82134, Q8NS90	Cgl0788 and Cgl0789	PY5PSH_reverse		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS181_num1		E_OptForce
-others	P82134, Q8NS90	Cgl0788 and Cgl0789	PY5PSH		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS121_num1		E_OptForce
-others	Q8NMS4	Cgl2491	AACPS1_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS180_num1		E_OptForce
 others	Q8NMS4	Cgl2491	3OAS161_num1		E_OptForce
-others	Q8NMS4	Cgl2491	3OAS140_num1		E_OptForce
-others	Q8NMS4	Cgl2491	AACPS8_num1		E_OptForce
-others	Q8NMS4	Cgl2491	AACPS3_num1		E_OptForce
-others	Q8NR51, H7C6C1, Q79VG9, Q7DIC8, Q79VG7, Q79VG6, P42464, Q9ETA7	Cgl1206 and Cgl1207 and Cgl1208 and Cgl1209 and Cgl1210 and Cgl1211 and Cgl1212 and Cgl1213	ATPS4rpp_reverse		E_OptForce
-Oxidative Phosphorylation	Q8NTN7, Q8NM51, Q8NM49	Cgl0269 and Cgl2729 and Cgl2731	NADH16pp		E_OptForce
-Oxidative Phosphorylation	Q8NTN7, Q8NM51, Q8NM49	Cgl0269 and Cgl2729 and Cgl2731	NADH18pp		E_OptForce
-Oxidative Phosphorylation	Q8NR51, H7C6C1, Q79VG9, Q7DIC8, Q79VG7, Q79VG6, P42464, Q9ETA7	Cgl1206 and Cgl1207 and Cgl1208 and Cgl1209 and Cgl1210 and Cgl1211 and Cgl1212 and Cgl1213	ATPS4rpp		E_OptForce
+others	Q8NMS4	Cgl2491	3OAS100_num1		E_OptForce
+others	Q8NMS4	Cgl2491	AACPS6_num1		E_OptForce
+others	Q8NMS4	Cgl2491	3OAS181_num1		E_OptForce
+others	Q8NMS4	Cgl2491	AACPS5_num1		E_OptForce
+others	Q8NMS4	Cgl2491	KAS14_num1		E_OptForce
 Oxidative Phosphorylation	Q8NTN7, Q8NM51, Q8NM49	Cgl0269 and Cgl2729 and Cgl2731	NADH17pp		E_OptForce
+Oxidative Phosphorylation	Q8NR51, H7C6C1, Q79VG9, Q7DIC8, Q79VG7, Q79VG6, P42464, Q9ETA7	Cgl1206 and Cgl1207 and Cgl1208 and Cgl1209 and Cgl1210 and Cgl1211 and Cgl1212 and Cgl1213	ATPS4rpp		E_OptForce
+Oxidative Phosphorylation	Q8NTN7, Q8NM51, Q8NM49	Cgl0269 and Cgl2729 and Cgl2731	NADH18pp		E_OptForce
+Oxidative Phosphorylation	Q8NTN7, Q8NM51, Q8NM49	Cgl0269 and Cgl2729 and Cgl2731	NADH16pp		E_OptForce
 Arginine and Proline Metabolism	Q59282	Cgl1397	ACOTA		E_OptForce
 Arginine and Proline Metabolism	P58939, P58893	Cgl1609 and Cgl1610	CBPS		E_OptForce
-Valine, Leucine, and Isoleucine Metabolism	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIa		E_OptForce
-Valine, Leucine, and Isoleucine Metabolism	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIb		E_OptForce
 Valine, Leucine, and Isoleucine Metabolism	Q57179	Cgl1273	KARA1		E_OptForce
 Valine, Leucine, and Isoleucine Metabolism	Q57179	Cgl1273	KARA2		E_OptForce
-Glycolysis/Gluconeogenesis	Q8NTE1, Q8NNJ2, Q8NNF6	Cgl0366 and Cgl2207 and Cgl2248	PDH		E_OptForce
+Valine, Leucine, and Isoleucine Metabolism	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIa		E_OptForce
+Valine, Leucine, and Isoleucine Metabolism	P58946, Q8NQV7	Cgl1315 and Cgl1316	IPPMIb		E_OptForce
 Tyrosine, Tryptophan, and Phenylalanine Metabolism	Q9X5D0	Cgl1623	CHORS		E_OptForce
 Glycine and Serine Metabolism	Q8NS51	Cgl0828	PSERT		E_OptForce
 Cofactor and Prosthetic Group Biosynthesis	Q8NS51	Cgl0828	OHPBAT		E_OptForce
-Citric Acid Cycle	P50216	Cgl0664	ICDHyr		E_OptForce

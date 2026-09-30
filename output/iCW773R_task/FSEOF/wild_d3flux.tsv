@@ -1,51 +1,45 @@
-HCO3E	1.77	co2_c + h2o_c --> h_c + hco3_c	CO2 + H2O --> H+ + Bicarbonate	(0.0, 1000.0)	{}
-ICL	1.423	icit_c --> glx_c + succ_c	Isocitrate --> Glyoxylate + Succinate	(0.0, 1000.0)	{}
-MALS	1.423	accoa_c + glx_c + h2o_c --> coa_c + h_c + mal__L_c	Acetyl-CoA + Glyoxylate + H2O --> Coenzyme A + H+ + L-Malate	(0.0, 1000.0)	{}
-PPC	3.766	co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c	CO2 + H2O + Phosphoenolpyruvate --> H+ + Oxaloacetate + Phosphate	(0.0, 1000.0)	{}
-ACONTa	1.434	cit_c --> acon_C_c + h2o_c	Citrate --> cis-Aconitate + H2O	(0.0, 1000.0)	{}
-ACONTb	1.434	acon_C_c + h2o_c --> icit_c	cis-Aconitate + H2O --> Isocitrate	(0.0, 1000.0)	{}
-CS_num1	1.434	accoa_c + h2o_c + oaa_c --> cit_c + coa_c + h_c	Acetyl-CoA + H2O + Oxaloacetate --> Citrate + Coenzyme A + H+	(0.0, 1000.0)	{}
-PYRC	1.769	atp_c + hco3_c + pyr_c --> adp_c + h_c + oaa_c + pi_c	ATP + Bicarbonate + Pyruvate --> ADP + H+ + Oxaloacetate + Phosphate	(0.0, 1000.0)	{}
-SADT2	1.295	atp_c + gtp_c + h2o_c + so4_c --> aps_c + gdp_c + pi_c + ppi_c	ATP + GTP + H2O + Sulfate --> Adenosine 5'-phosphosulfate + GDP + Phosphate + Diphosphate	(0.0, 1000.0)	{}
-SULRi	1.295	5.0 h_c + 3.0 nadph_c + so3_c --> 3.0 h2o_c + h2s_c + 3.0 nadp_c	5.0 H+ + 3.0 Nicotinamide adenine dinucleotide phosphate - reduced + Sulfite --> 3.0 H2O + Hydrogen sulfide + 3.0 Nicotinamide adenine dinucleotide phosphate	(0.0, 1000.0)	{}
-EX_fum_e	6.94	fum_e --> 	Fumarate --> 	(6.9399, 6.9399)	{'charge': 2.0, 'C': -4.0, 'H': -2.0, 'O': -4.0}
-EX_h_e	11.337	h_e --> 	H+ --> 	(0.0, 1000.0)	{'charge': -1.0, 'H': -1.0}
-EX_h2o_e	14.01	h2o_e --> 	H2O --> 	(0.0, 1000.0)	{'H': -2.0, 'O': -1.0}
-EX_h2s_e	1.293	h2s_e --> 	Hydrogen sulfide --> 	(0.0, 1000.0)	{'H': -2.0, 'S': -1.0}
-EX_o2_e	-4.33	o2_e <=> 	O2 <=> 	(-1000, 1000.0)	{'O': -2.0}
-ENO	8.44	2pg_c --> h2o_c + pep_c	D-Glycerate 2-phosphate --> H2O + Phosphoenolpyruvate	(0.0, 1000.0)	{}
-FBA	3.787	fdp_c --> dhap_c + g3p_c	D-Fructose 1,6-bisphosphate --> Dihydroxyacetone phosphate + Glyceraldehyde 3-phosphate	(0.0, 1000.0)	{}
-PDH	2.885	coa_c + nad_c + pyr_c --> accoa_c + co2_c + nadh_c	Coenzyme A + Nicotinamide adenine dinucleotide + Pyruvate --> Acetyl-CoA + CO2 + Nicotinamide adenine dinucleotide - reduced	(0.0, 1000.0)	{}
-PFK	3.787	atp_c + f6p_c --> adp_c + fdp_c + h_c	ATP + D-Fructose 6-phosphate --> ADP + D-Fructose 1,6-bisphosphate + H+	(0.0, 1000.0)	{}
-PGI	2.039	g6p_c --> f6p_c	D-Glucose 6-phosphate --> D-Fructose 6-phosphate	(0.0, 1000.0)	{}
-PGK	8.447	13dpg_c + adp_c --> 3pg_c + atp_c	3-Phospho-D-glyceroyl phosphate + ADP --> 3-Phospho-D-glycerate + ATP	(0.0, 1000.0)	{}
-TPI	3.786	dhap_c --> g3p_c	Dihydroxyacetone phosphate --> Glyceraldehyde 3-phosphate	(0.0, 1000.0)	{}
-O2tpp	4.33	o2_e --> o2_c	O2 --> O2	(0.0, 1000.0)	{}
-SO3TRDRD	1.295	aps_c + trdrd_c --> amp_c + 2.0 h_c + so3_c + trdox_c	Adenosine 5'-phosphosulfate + Reduced thioredoxin --> AMP + 2.0 H+ + Sulfite + Oxidized thioredoxin	(0.0, 1000.0)	{}
-SULabcpp	1.295	atp_c + h2o_c + so4_e --> adp_c + h_c + pi_c + so4_c	ATP + H2O + Sulfate --> ADP + H+ + Phosphate + Sulfate	(0.0, 1000.0)	{}
-ADK1	1.301	amp_c + atp_c --> 2.0 adp_c	AMP + ATP --> 2.0 ADP	(0.0, 1000.0)	{}
-NDPK1	1.296	atp_c + gdp_c --> adp_c + gtp_c	ATP + GDP --> ADP + GTP	(0.0, 1000.0)	{}
-ATPS4rpp	1.493	adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c	ADP + 4.0 H+ + Phosphate --> ATP + H2O + 3.0 H+	(0.0, 1000.0)	{}
-CYTBDpp	8.658	2.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 2.0 h_e + q8_c	2.0 H+ + 0.5 O2 + Ubiquinol-8 --> H2O + 2.0 H+ + Ubiquinone-8	(0.0, 1000.0)	{}
-NADH5	7.233	h_c + nadh_c + q8_c --> nad_c + q8h2_c	H+ + Nicotinamide adenine dinucleotide - reduced + Ubiquinone-8 --> Nicotinamide adenine dinucleotide + Ubiquinol-8	(0.0, 1000.0)	{}
-SUCDi	1.425	q8_c + succ_c --> fum_c + q8h2_c	Ubiquinone-8 + Succinate --> Fumarate + Ubiquinol-8	(0.0, 1000.0)	{}
-TRDR	1.295	h_c + nadph_c + trdox_c --> nadp_c + trdrd_c	H+ + Nicotinamide adenine dinucleotide phosphate - reduced + Oxidized thioredoxin --> Nicotinamide adenine dinucleotide phosphate + Reduced thioredoxin	(0.0, 1000.0)	{}
-G6PDH2r	2.63	g6p_c + nadp_c --> 6pgl_c + h_c + nadph_c	D-Glucose 6-phosphate + Nicotinamide adenine dinucleotide phosphate --> 6-phospho-D-glucono-1,5-lactone + H+ + Nicotinamide adenine dinucleotide phosphate - reduced	(0.0, 1000.0)	{}
-GND	2.63	6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c	6-Phospho-D-gluconate + Nicotinamide adenine dinucleotide phosphate --> CO2 + Nicotinamide adenine dinucleotide phosphate - reduced + D-Ribulose 5-phosphate	(0.0, 1000.0)	{}
-PGL	2.63	6pgl_c + h2o_c --> 6pgc_c + h_c	6-phospho-D-glucono-1,5-lactone + H2O --> 6-Phospho-D-gluconate + H+	(0.0, 1000.0)	{}
-RPE	1.748	ru5p__D_c --> xu5p__D_c	D-Ribulose 5-phosphate --> D-Xylulose 5-phosphate	(0.0, 1000.0)	{}
-TALA	0.875	g3p_c + s7p_c --> e4p_c + f6p_c	Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate --> D-Erythrose 4-phosphate + D-Fructose 6-phosphate	(0.0, 1000.0)	{}
-TKT1	0.875	r5p_c + xu5p__D_c --> g3p_c + s7p_c	alpha-D-Ribose 5-phosphate + D-Xylulose 5-phosphate --> Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate	(0.0, 1000.0)	{}
-TKT2	0.873	e4p_c + xu5p__D_c --> f6p_c + g3p_c	D-Erythrose 4-phosphate + D-Xylulose 5-phosphate --> D-Fructose 6-phosphate + Glyceraldehyde 3-phosphate	(0.0, 1000.0)	{}
+HCO3E	5.602	co2_c + h2o_c --> h_c + hco3_c	CO2 + H2O --> H+ + Bicarbonate	(0.0, 1000.0)	{}
+ME2	4.737	mal__L_c + nadp_c --> co2_c + nadph_c + pyr_c	L-Malate + Nicotinamide adenine dinucleotide phosphate --> CO2 + Nicotinamide adenine dinucleotide phosphate - reduced + Pyruvate	(0.0, 1000.0)	{}
+PPC	2.919	co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c	CO2 + H2O + Phosphoenolpyruvate --> H+ + Oxaloacetate + Phosphate	(0.0, 1000.0)	{}
+PYRC	5.601	atp_c + hco3_c + pyr_c --> adp_c + h_c + oaa_c + pi_c	ATP + Bicarbonate + Pyruvate --> ADP + H+ + Oxaloacetate + Phosphate	(0.0, 1000.0)	{}
+EX_co2_e	5.224	co2_e --> 	CO2 --> 	(0, 1000.0)	{'C': -1.0, 'O': -2.0}
+EX_h_e	3.803	h_e --> 	H+ --> 	(0.0, 1000.0)	{'charge': -1.0, 'H': -1.0}
+EX_h2o_e	12.855	h2o_e --> 	H2O --> 	(0.0, 1000.0)	{'H': -2.0, 'O': -1.0}
+EX_lys_L_e	3.772	lys__L_e --> 	L-Lysine --> 	(3.7719, 3.7719)	{'charge': -1.0, 'C': -6.0, 'H': -15.0, 'N': -2.0, 'O': -2.0}
+EX_o2_e	-1.44	o2_e <=> 	O2 <=> 	(-1000, 1000.0)	{'O': -2.0}
+GLUDy	3.799	akg_c + h_c + nadph_c + nh4_c --> glu__L_c + h2o_c + nadp_c	2-Oxoglutarate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced + Ammonium --> L-Glutamate + H2O + Nicotinamide adenine dinucleotide phosphate	(0.0, 1000.0)	{}
+ENO	7.591	2pg_c --> h2o_c + pep_c	D-Glycerate 2-phosphate --> H2O + Phosphoenolpyruvate	(0.0, 1000.0)	{}
+FBA	2.932	fdp_c --> dhap_c + g3p_c	D-Fructose 1,6-bisphosphate --> Dihydroxyacetone phosphate + Glyceraldehyde 3-phosphate	(0.0, 1000.0)	{}
+GAPD_num1	7.596	g3p_c + nad_c + pi_c --> 13dpg_c + h_c + nadh_c	Glyceraldehyde 3-phosphate + Nicotinamide adenine dinucleotide + Phosphate --> 3-Phospho-D-glyceroyl phosphate + H+ + Nicotinamide adenine dinucleotide - reduced	(0.0, 1000.0)	{}
+PFK	2.932	atp_c + f6p_c --> adp_c + fdp_c + h_c	ATP + D-Fructose 6-phosphate --> ADP + D-Fructose 1,6-bisphosphate + H+	(0.0, 1000.0)	{}
+PGK	7.596	13dpg_c + adp_c --> 3pg_c + atp_c	3-Phospho-D-glyceroyl phosphate + ADP --> 3-Phospho-D-glycerate + ATP	(0.0, 1000.0)	{}
+TPI	2.932	dhap_c --> g3p_c	Dihydroxyacetone phosphate --> Glyceraldehyde 3-phosphate	(0.0, 1000.0)	{}
+O2tpp	1.44	o2_e --> o2_c	O2 --> O2	(0.0, 1000.0)	{}
+ATPS4rpp	5.031	adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c	ADP + 4.0 H+ + Phosphate --> ATP + H2O + 3.0 H+	(0.0, 1000.0)	{}
+CYTBO3_4pp	2.88	4.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 4.0 h_e + q8_c	4.0 H+ + 0.5 O2 + Ubiquinol-8 --> H2O + 4.0 H+ + Ubiquinone-8	(0.0, 1000.0)	{}
+NADH16pp	2.88	4.0 h_c + nadh_c + q8_c --> 3.0 h_e + nad_c + q8h2_c	4.0 H+ + Nicotinamide adenine dinucleotide - reduced + Ubiquinone-8 --> 3.0 H+ + Nicotinamide adenine dinucleotide + Ubiquinol-8	(0.0, 1000.0)	{}
+G6PDH2r	5.201	g6p_c + nadp_c --> 6pgl_c + h_c + nadph_c	D-Glucose 6-phosphate + Nicotinamide adenine dinucleotide phosphate --> 6-phospho-D-glucono-1,5-lactone + H+ + Nicotinamide adenine dinucleotide phosphate - reduced	(0.0, 1000.0)	{}
+GND	5.201	6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c	6-Phospho-D-gluconate + Nicotinamide adenine dinucleotide phosphate --> CO2 + Nicotinamide adenine dinucleotide phosphate - reduced + D-Ribulose 5-phosphate	(0.0, 1000.0)	{}
+PGL	5.201	6pgl_c + h2o_c --> 6pgc_c + h_c	6-phospho-D-glucono-1,5-lactone + H2O --> 6-Phospho-D-gluconate + H+	(0.0, 1000.0)	{}
+RPE	3.464	ru5p__D_c --> xu5p__D_c	D-Ribulose 5-phosphate --> D-Xylulose 5-phosphate	(0.0, 1000.0)	{}
+TALA	1.733	g3p_c + s7p_c --> e4p_c + f6p_c	Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate --> D-Erythrose 4-phosphate + D-Fructose 6-phosphate	(0.0, 1000.0)	{}
+TKT1	1.733	r5p_c + xu5p__D_c --> g3p_c + s7p_c	alpha-D-Ribose 5-phosphate + D-Xylulose 5-phosphate --> Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate	(0.0, 1000.0)	{}
+TKT2	1.732	e4p_c + xu5p__D_c --> f6p_c + g3p_c	D-Erythrose 4-phosphate + D-Xylulose 5-phosphate --> D-Fructose 6-phosphate + Glyceraldehyde 3-phosphate	(0.0, 1000.0)	{}
+ASPK	3.775	asp__L_c + atp_c --> 4pasp_c + adp_c	L-Aspartate + ATP --> 4-Phospho-L-aspartate + ADP	(0.0, 1000.0)	{}
+DAPDH	3.773	2.0 h_c + nadph_c + nh4_c + thdp_c --> 26dap__M_c + nadp_c	2.0 H+ + Nicotinamide adenine dinucleotide phosphate - reduced + Ammonium + 2,3,4,5-Tetrahydrodipicolinate --> meso-2,6-Diaminoheptanedioate + Nicotinamide adenine dinucleotide phosphate	(0.0, 1000.0)	{}
+DHDPRy	3.773	23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c	2,3-Dihydrodipicolinate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> Nicotinamide adenine dinucleotide phosphate + 2,3,4,5-Tetrahydrodipicolinate	(0.0, 1000.0)	{}
+DHDPS	3.773	aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c	L-Aspartate 4-semialdehyde + Pyruvate --> 2,3-Dihydrodipicolinate + 2.0 H2O + H+	(0.0, 1000.0)	{}
 GLCptspp	4.67	glc__D_e + pep_c --> g6p_c + pyr_c	D-Glucose + Phosphoenolpyruvate --> D-Glucose 6-phosphate + Pyruvate	(0.0, 1000.0)	{}
-H2St1pp	1.293	h2s_c --> h2s_e	Hydrogen sulfide --> Hydrogen sulfide	(0.0, 1000.0)	{}
-FUM_reverse	5.512	mal__L_c --> fum_c + h2o_c	L-Malate --> Fumarate + H2O	(0.0, 1000.0)	{}
-MDH_reverse	4.089	h_c + nadh_c + oaa_c --> mal__L_c + nad_c	H+ + Nicotinamide adenine dinucleotide - reduced + Oxaloacetate --> L-Malate + Nicotinamide adenine dinucleotide	(0.0, 1000.0)	{}
+CO2tpp	5.224	co2_c --> co2_e	CO2 --> CO2	(0.0, 1000.0)	{}
+ASPTA_reverse	3.78	glu__L_c + oaa_c --> akg_c + asp__L_c	L-Glutamate + Oxaloacetate --> 2-Oxoglutarate + L-Aspartate	(0.0, 1000.0)	{}
+MDH_reverse	4.734	h_c + nadh_c + oaa_c --> mal__L_c + nad_c	H+ + Nicotinamide adenine dinucleotide - reduced + Oxaloacetate --> L-Malate + Nicotinamide adenine dinucleotide	(0.0, 1000.0)	{}
 EX_glc_e_reverse	4.67	 --> glc__D_e	 --> D-Glucose	(0.0, 4.67)	{'C': 6.0, 'H': 12.0, 'O': 6.0}
-EX_so4_e_reverse	1.295	 --> so4_e	 --> Sulfate	(0.0, 1000.0)	{'charge': -2.0, 'O': 4.0, 'S': 1.0}
-PPKr_reverse	1.308	adp_c + ppi_c --> atp_c + pi_c	ADP + Diphosphate --> ATP + Phosphate	(0.0, 1000.0)	{}
-RPI_reverse	0.881	ru5p__D_c --> r5p_c	D-Ribulose 5-phosphate --> alpha-D-Ribose 5-phosphate	(0.0, 1000.0)	{}
-FUMtex_reverse	6.94	fum_c --> fum_e	Fumarate --> Fumarate	(0.0, 1000.0)	{}
-H2Otpp_reverse	14.01	h2o_c --> h2o_e	H2O --> H2O	(0.0, 1000.0)	{}
-GAPD_num2	8.447	g3p_c + nad_c + pi_c --> 13dpg_c + h_c + nadh_c	Glyceraldehyde 3-phosphate + Nicotinamide adenine dinucleotide + Phosphate --> 3-Phospho-D-glyceroyl phosphate + H+ + Nicotinamide adenine dinucleotide - reduced	(0.0, 1000.0)	{}
-PGM_num5	8.44	3pg_c --> 2pg_c	3-Phospho-D-glycerate --> D-Glycerate 2-phosphate	(0.0, 1000.0)	{}
+EX_nh4_e_reverse	7.578	 --> nh4_e	 --> Ammonium	(0.0, 1000.0)	{'charge': 1.0, 'H': 4.0, 'N': 1.0}
+PGI_reverse	0.531	f6p_c --> g6p_c	D-Fructose 6-phosphate --> D-Glucose 6-phosphate	(0.0, 1000.0)	{}
+RPI_reverse	1.737	ru5p__D_c --> r5p_c	D-Ribulose 5-phosphate --> alpha-D-Ribose 5-phosphate	(0.0, 1000.0)	{}
+ASAD_reverse	3.775	4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c	4-Phospho-L-aspartate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> L-Aspartate 4-semialdehyde + Nicotinamide adenine dinucleotide phosphate + Phosphate	(0.0, 1000.0)	{}
+H2Otpp_reverse	12.855	h2o_c --> h2o_e	H2O --> H2O	(0.0, 1000.0)	{}
+LYSt2pp_reverse	3.772	h_c + lys__L_c --> h_e + lys__L_e	H+ + L-Lysine --> H+ + L-Lysine	(0.0, 1000.0)	{}
+PGM_num2	7.591	3pg_c --> 2pg_c	3-Phospho-D-glycerate --> D-Glycerate 2-phosphate	(0.0, 1000.0)	{}
+NH4tpp_num2	7.578	nh4_e --> nh4_c	Ammonium --> Ammonium	(0.0, 1000.0)	{}
+DAPDC_num2	3.773	26dap__M_c + h_c --> co2_c + lys__L_c	meso-2,6-Diaminoheptanedioate + H+ --> CO2 + L-Lysine	(0.0, 1000.0)	{}

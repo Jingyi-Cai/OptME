@@ -40,6 +40,8 @@ def read_file(path_results, path_task, path_model, path_map, taskname):
         with open(os.path.join(path_task, taskname) + '.json', encoding='utf-8') as fp:
             inputdic = json.load(fp)
         method = inputdic['taskname']
+        if isinstance(method, str):
+            method = [method]
     except Exception as e:
         print(f"Error reading task configuration: {e}")
         return None, None, None, None, None, None, None, None, None, None, []

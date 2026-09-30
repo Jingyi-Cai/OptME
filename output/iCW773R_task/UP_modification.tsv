@@ -1,1 +1,137 @@
 pathway	reaction	rxn_name	gene_id	equation	Score_sum	target_number
+Threonine and Lysine Metabolism	DHDPRy	dihydrodipicolinate reductase (NADPH)	Cgl1973	23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c	1.981	FSEOF, OptForce
+Threonine and Lysine Metabolism	DHDPS	dihydrodipicolinate synthase	Cgl1971	aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c	1.981	FSEOF, OptForce
+Threonine and Lysine Metabolism	ASPK	aspartokinase	Cgl0251	asp__L_c + atp_c --> 4pasp_c + adp_c	1.484	FSEOF, OptForce
+Threonine and Lysine Metabolism	DAPE	diaminopimelate epimerase	Cgl1943	26dap_LL_c --> 26dap__M_c	0.485	iBridge
+Threonine and Lysine Metabolism	HSDy	homoserine dehydrogenase (NADPH)	Cgl1183	hom__L_c + nadp_c --> aspsa_c + h_c + nadph_c	0.456	iBridge
+Threonine and Lysine Metabolism	SDPTA	succinyldiaminopimelate transaminase	Cgl0814	akg_c + sl26da_c --> glu__L_c + sl2a6o_c	0.385	iBridge
+Threonine and Lysine Metabolism	SDPTA	succinyldiaminopimelate transaminase	Cgl0814	akg_c + sl26da_c --> glu__L_c + sl2a6o_c	0.188	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ALATA_D2	D-alanine transaminase	Cgl0996	ala__D_c + pydx5p_c --> pyam5p_c + pyr_c	1.0	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ADCL	4-aminobenzoate synthase	Cgl2580	4adcho_c --> 4abz_c + h_c + pyr_c	1.0	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ALATA_L2	alanine transaminase	Cgl0996	ala__L_c + pydx5p_c --> pyam5p_c + pyr_c	1.0	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ALATA_D2	D-alanine transaminase	Cgl0996	ala__D_c + pydx5p_c --> pyam5p_c + pyr_c	0.995	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ALATA_L2	alanine transaminase	Cgl0996	ala__L_c + pydx5p_c --> pyam5p_c + pyr_c	0.971	iBridge
+Cofactor and Prosthetic Group Biosynthesis	GTHRDHpp	glutathione hydralase	Cgl0954	gthrd_c + h2o_c --> cgly_c + glu__L_c	0.385	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ADCS	4-amino-4-deoxychorismate synthase	Cgl0997	chor_c + gln__L_c --> 4adcho_c + glu__L_c	0.375	iBridge
+Cofactor and Prosthetic Group Biosynthesis	ADCS	4-amino-4-deoxychorismate synthase	Cgl0997	chor_c + gln__L_c --> 4adcho_c + glu__L_c	0.345	iBridge
+Oxidative Phosphorylation	LDH_D2	D-lactate dehydrogenase	Cgl0901	lac__D_c + q8_c --> pyr_c + q8h2_c	1.0	iBridge
+Oxidative Phosphorylation	L_LACD2	L-Lactate dehydrogenase (ubiquinone)	Cgl2918	lac__L_c + q8_c --> pyr_c + q8h2_c	1.0	iBridge
+Oxidative Phosphorylation	L_LACD3	L-Lactate dehydrogenase (menaquinone)	Cgl2918	lac__L_c + mqn8_c --> mql8_c + pyr_c	1.0	iBridge
+Oxidative Phosphorylation	L_LACD3	L-Lactate dehydrogenase (menaquinone)	Cgl2918	lac__L_c + mqn8_c --> mql8_c + pyr_c	1.0	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	ANS	anthranilate synthase	Cgl3029 and Cgl3031	chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c	0.99	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	ANS	anthranilate synthase	Cgl3029 and Cgl3031	chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c	0.96	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	ANS	anthranilate synthase	Cgl3029 and Cgl3031	chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c	0.375	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	ANS	anthranilate synthase	Cgl3029 and Cgl3031	chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c	0.345	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	TRPS3	tryptophan synthase (indoleglycerol phosphate)	Cgl3034 and Cgl3035	3ig3p_c --> g3p_c + indole_c	0.148	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	TRPS1	tryptophan synthase (indoleglycerol phosphate)	Cgl3034 and Cgl3035	3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c	0.148	iBridge
+Tyrosine, Tryptophan, and Phenylalanine Metabolism	TRPS1	tryptophan synthase (indoleglycerol phosphate)	Cgl3034 and Cgl3035	3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c	0.103	iBridge
+Alternate Carbon Metabolism	ACNML	N-Acetylneuraminate lyase	Cgl2646	acnam_c --> acmana_c + pyr_c	1.0	iBridge
+Alternate Carbon Metabolism	DHAPT	Dihydroxyacetone phosphotransferase	Cgl1528	dha_c + pep_c --> dhap_c + pyr_c	1.0	iBridge
+Alternate Carbon Metabolism	PGMT	phosphoglucomutase	Cgl2541	g1p_c --> g6p_c	0.505	iBridge
+Alternate Carbon Metabolism	XYLK	xylulokinase	Cgl0112	atp_c + xylu__D_c --> adp_c + h_c + xu5p__D_c	0.31	iBridge
+Alternate Carbon Metabolism	DRPA	deoxyribose-phosphate aldolase	Cgl0383	2dr5p_c --> acald_c + g3p_c	0.149	iBridge
+Alanine and Aspartate Metabolism	DAAD	D-Amino acid dehydrogenase	Cgl3012	ala__D_c + fad_c + h2o_c --> fadh2_c + nh4_c + pyr_c	0.995	iBridge
+Alanine and Aspartate Metabolism	ASPTA	aspartate transaminase	Cgl0240	akg_c + asp__L_c --> glu__L_c + oaa_c	0.63	iBridge
+Alanine and Aspartate Metabolism	ASNN	L-asparaginase	Cgl2143	asn__L_c + h2o_c --> asp__L_c + nh4_c	0.42	iBridge
+Alanine and Aspartate Metabolism	ASNS1	asparagine synthase (glutamine-hydrolysing)	Cgl2196	asp__L_c + atp_c + gln__L_c + h2o_c --> amp_c + asn__L_c + glu__L_c + h_c + ppi_c	0.345	iBridge
+Alanine and Aspartate Metabolism	ASPTA	aspartate transaminase	Cgl0240	akg_c + asp__L_c --> glu__L_c + oaa_c	0.188	iBridge
+Purine and Pyrimidine Biosynthesis	PRFGS	phosphoribosylformylglycinamidine synthase	Cgl2588 and Cgl2589 and Cgl2590	atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c	0.371	iBridge
+Purine and Pyrimidine Biosynthesis	GLUPRT	glutamine phosphoribosyldiphosphate amidotransferase	Cgl2584	gln__L_c + h2o_c + prpp_c --> glu__L_c + ppi_c + pram_c	0.369	iBridge
+Purine and Pyrimidine Biosynthesis	CTPS2	CTP synthase (glutamine)	Cgl1417	atp_c + gln__L_c + h2o_c + utp_c --> adp_c + ctp_c + glu__L_c + 2.0 h_c + pi_c	0.345	iBridge
+Purine and Pyrimidine Biosynthesis	GLUPRT	glutamine phosphoribosyldiphosphate amidotransferase	Cgl2584	gln__L_c + h2o_c + prpp_c --> glu__L_c + ppi_c + pram_c	0.345	iBridge
+Purine and Pyrimidine Biosynthesis	GMPS2	GMP synthase	Cgl0607	atp_c + gln__L_c + h2o_c + xmp_c --> amp_c + glu__L_c + gmp_c + 2.0 h_c + ppi_c	0.345	iBridge
+Purine and Pyrimidine Biosynthesis	PRFGS	phosphoribosylformylglycinamidine synthase	Cgl2588 and Cgl2589 and Cgl2590	atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c	0.345	iBridge
+Arginine and Proline Metabolism	ABTA	4-aminobutyrate transaminase	Cgl0479	4abut_c + akg_c --> glu__L_c + sucsal_c	0.379	iBridge
+Arginine and Proline Metabolism	P5CD	1-pyrroline-5-carboxylate dehydrogenase	Cgl0099	1pyr5c_c + 2.0 h2o_c + nad_c --> glu__L_c + h_c + nadh_c	0.375	iBridge
+Arginine and Proline Metabolism	ACOTA	acetylornithine transaminase	Cgl1397	acorn_c + akg_c --> acg5sa_c + glu__L_c	0.373	iBridge
+Arginine and Proline Metabolism	CBPS	carbamoyl-phosphate synthase (glutamine-hydrolysing)	Cgl1609 and Cgl1610	2.0 atp_c + gln__L_c + h2o_c + hco3_c --> 2.0 adp_c + cbp_c + glu__L_c + 2.0 h_c + pi_c	0.345	iBridge
+Arginine and Proline Metabolism	ACOTA	acetylornithine transaminase	Cgl1397	acorn_c + akg_c --> acg5sa_c + glu__L_c	0.188	iBridge
+Arginine and Proline Metabolism	ABTA	4-aminobutyrate transaminase	Cgl0479	4abut_c + akg_c --> glu__L_c + sucsal_c	0.188	iBridge
+Citric Acid Cycle	MDH3	Malate dehydrogenase (menaquinone 8 as acceptor)	Cgl2380	mal__L_c + mqn8_c --> mql8_c + oaa_c	0.827	iBridge
+Citric Acid Cycle	CITL	Citrate lyase	Cgl0862	cit_c --> ac_c + oaa_c	0.522	iBridge
+Citric Acid Cycle	FUM	fumarase	Cgl1010	fum_c + h2o_c --> mal__L_c	0.341	iBridge
+Glutamate Metabolism	GLUSy	glutamate synthase (NADPH)	Cgl0184 and Cgl0185	akg_c + gln__L_c + h_c + nadph_c --> 2.0 glu__L_c + nadp_c	0.345	iBridge
+Glutamate Metabolism	GLUN	glutaminase	Cgl2482	gln__L_c + h2o_c --> glu__L_c + nh4_c	0.345	iBridge
+Glutamate Metabolism	GLUSy	glutamate synthase (NADPH)	Cgl0184 and Cgl0185	akg_c + gln__L_c + h_c + nadph_c --> 2.0 glu__L_c + nadp_c	0.188	iBridge
+Glutamate Metabolism	GLUDy	glutamate dehydrogenase (NADP)	Cgl2079	akg_c + h_c + nadph_c + nh4_c --> glu__L_c + h2o_c + nadp_c	0.188	iBridge
+Cell Envelope Biosynthesis	GLUR	glutamate racemase	Cgl2509	glu__D_c --> glu__L_c	0.382	iBridge
+Cell Envelope Biosynthesis	GF6PTA	glutamine-fructose-6-phosphate transaminase	Cgl2271	f6p_c + gln__L_c --> gam6p_c + glu__L_c	0.345	iBridge
+Cell Envelope Biosynthesis	GF6PTA	glutamine-fructose-6-phosphate transaminase	Cgl2271	f6p_c + gln__L_c --> gam6p_c + glu__L_c	0.299	iBridge
+Pyruvate Metabolism	LDH_D	D-lactate dehydrogenase	Cgl0901	lac__D_c + nad_c --> h_c + nadh_c + pyr_c	1.0	iBridge
+Glycine and Serine Metabolism	SERD_L	L-serine deaminase	Cgl1645	ser__L_c --> nh4_c + pyr_c	0.953	iBridge
+Glycine and Serine Metabolism	GLYCK2	glycerate kinase	Cgl2082	atp_c + glyc__R_c --> 2pg_c + adp_c + h_c	0.043	iBridge
+Methionine Metabolism	CYSTL	cystathionine b-lyase	Cgl2309	cyst__L_c + h2o_c --> hcys__L_c + nh4_c + pyr_c	0.995	iBridge
+Anaplerotic Reactions	MALS	malate synthase	Cgl2330	accoa_c + glx_c + h2o_c --> coa_c + h_c + mal__L_c	0.575	iBridge
+Anaplerotic Reactions	MALS	malate synthase	Cgl2330	accoa_c + glx_c + h2o_c --> coa_c + h_c + mal__L_c	0.279	iBridge
+Histidine Metabolism	IG3PS	Imidazole-glycerol-3-phosphate synthase	Cgl2094 and Cgl2097	gln__L_c + prlp_c --> aicar_c + eig3p_c + glu__L_c + h_c	0.381	iBridge
+Histidine Metabolism	IG3PS	Imidazole-glycerol-3-phosphate synthase	Cgl2094 and Cgl2097	gln__L_c + prlp_c --> aicar_c + eig3p_c + glu__L_c + h_c	0.345	iBridge
+Glycolysis/Gluconeogenesis	HEX1	hexokinase (D-glucose:ATP)	Cgl2185	atp_c + glc__D_c --> adp_c + g6p_c + h_c	0.501	iBridge
+Glycolysis/Gluconeogenesis	TPI	triose-phosphate isomerase	Cgl1586	dhap_c --> g3p_c	0.071	iBridge
+Glycolysis/Gluconeogenesis	FBA	fructose-bisphosphate aldolase	Cgl2770	fdp_c --> dhap_c + g3p_c	0.058	iBridge
+Nucleotide Salvage Pathway	ADPRDP	ADPribose diphosphatase	Cgl1418	adprib_c + h2o_c --> amp_c + 2.0 h_c + r5p_c	0.183	iBridge
+others	DAPDH	diaminopimelate dehydrogenase	Cgl2617	2.0 h_c + nadph_c + nh4_c + thdp_c --> 26dap__M_c + nadp_c	1.862	FSEOF, OptForce
+others	ASAD_reverse	N/A	Cgl0252	4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c	1.484	FSEOF, OptForce
+others	DAPDC_num2	diaminopimelate decarboxylase	Cgl2135	26dap__M_c + h_c --> co2_c + lys__L_c	1.0	FSEOF
+others	MCPST_num1	3-mercaptopyruvate sulfurtransferase	Cgl0701	cyan_c + mercppyr_c --> h_c + pyr_c + tcynt_c	1.0	iBridge
+others	MCPST_num2	3-mercaptopyruvate sulfurtransferase	Cgl1424	cyan_c + mercppyr_c --> h_c + pyr_c + tcynt_c	1.0	iBridge
+others	MCPST_num2	3-mercaptopyruvate sulfurtransferase	Cgl1424	cyan_c + mercppyr_c --> h_c + pyr_c + tcynt_c	1.0	iBridge
+others	MCITL2_num1	methylisocitrate lyase	Cgl0695	micit_c --> pyr_c + succ_c	1.0	iBridge
+others	MCPST_num1	3-mercaptopyruvate sulfurtransferase	Cgl0701	cyan_c + mercppyr_c --> h_c + pyr_c + tcynt_c	1.0	iBridge
+others	MCITL2_num2	methylisocitrate lyase	Cgl0658	micit_c --> pyr_c + succ_c	1.0	iBridge
+others	PPASUCC	PPASUCC	N/A	oaa_c + ppa_c --> pyr_c + succ_c	1.0	iBridge
+others	MCPST_num3	3-mercaptopyruvate sulfurtransferase	Cgl2776	cyan_c + mercppyr_c --> h_c + pyr_c + tcynt_c	1.0	iBridge
+others	MCPST_num3	3-mercaptopyruvate sulfurtransferase	Cgl2776	cyan_c + mercppyr_c --> h_c + pyr_c + tcynt_c	1.0	iBridge
+others	TREptsp_num1	trehalose via PEP:Pyr	Cgl1933	pep_c + tre_c --> pyr_c + tre6p_c	0.999	iBridge
+others	TREptsp_num2	trehalose via PEP:Pyr	Cgl2875	pep_c + tre_c --> pyr_c + tre6p_c	0.999	iBridge
+others	TREptsp_num3	trehalose via PEP:Pyr	Cgl2878	pep_c + tre_c --> pyr_c + tre6p_c	0.999	iBridge
+others	VPAMT	Valine-pyruvate aminotransferase	Cgl2844	3mob_c + ala__L_c --> pyr_c + val__L_c	0.973	iBridge
+others	ALATA_L_reverse	N/A	Cgl2844	akg_c + ala__L_c --> glu__L_c + pyr_c	0.971	iBridge
+others	VPAMT	Valine-pyruvate aminotransferase	Cgl2844	3mob_c + ala__L_c --> pyr_c + val__L_c	0.971	iBridge
+others	2METS_reverse	N/A	Cgl0659	coa_c + hcat_c --> h2o_c + oaa_c + ppcoa_c	0.827	iBridge
+others	ALATA_L_reverse	N/A	Cgl2844	akg_c + ala__L_c --> glu__L_c + pyr_c	0.804	iBridge
+others	ASPTA_reverse	N/A	Cgl0240	glu__L_c + oaa_c --> akg_c + asp__L_c	0.555	FSEOF
+others	FFSD_num1	beta-fructofuranosidase	Cgl2643	h2o_c + suc6p_c --> fru_c + g6p_c	0.506	iBridge
+others	FFSD_num2	beta-fructofuranosidase	Cgl1116	h2o_c + suc6p_c --> fru_c + g6p_c	0.506	iBridge
+others	GNK_num1	gluconokinase	Cgl2485	atp_c + glcn_c --> 6pgc_c + adp_c + h_c	0.506	iBridge
+others	GNK_num2	gluconokinase	Cgl3008	atp_c + glcn_c --> 6pgc_c + adp_c + h_c	0.506	iBridge
+others	TRE6p	trehalose-6-phosphate hydrolase	N/A	h2o_c + tre6p_c --> g6p_c + glc__D_c	0.505	iBridge
+others	PGI_reverse	N/A	Cgl0851	f6p_c --> g6p_c	0.42	iBridge
+others	TRATF_num2	taurine aminotransferase	Cgl0202	akg_c + tau_c --> 2saa_c + glu__L_c	0.385	iBridge
+others	TRATF_num1	taurine aminotransferase	Cgl2441	akg_c + tau_c --> 2saa_c + glu__L_c	0.385	iBridge
+others	OHPBAT_reverse	N/A	Cgl0828	akg_c + phthr_c --> glu__L_c + ohpb_c	0.385	iBridge
+others	GLUNATF_reverse	N/A	Cgl1395	acglu_c + orn_c --> acorn_c + glu__L_c	0.373	iBridge
+others	GLUNATF_reverse	N/A	Cgl1395	acglu_c + orn_c --> acorn_c + glu__L_c	0.373	iBridge
+others	ALATA_L_reverse	N/A	Cgl2844	akg_c + ala__L_c --> glu__L_c + pyr_c	0.356	iBridge
+others	TYRTA_reverse_num1	N/A	Cgl0218	akg_c + tyr__L_c --> 34hpp_c + glu__L_c	0.355	iBridge
+others	PHETA1_reverse_num1	N/A	Cgl0218	akg_c + phe__L_c --> glu__L_c + phpyr_c	0.355	iBridge
+others	LEUTAi_reverse	N/A	Cgl2204	akg_c + leu__L_c --> 4mop_c + glu__L_c	0.355	iBridge
+others	ILETA_reverse	N/A	Cgl2204	akg_c + ile__L_c --> 3mop_c + glu__L_c	0.355	iBridge
+others	TYRTA_reverse_num2	N/A	Cgl2101	akg_c + tyr__L_c --> 34hpp_c + glu__L_c	0.355	iBridge
+others	PHETA1_reverse_num2	N/A	Cgl2101	akg_c + phe__L_c --> glu__L_c + phpyr_c	0.355	iBridge
+others	PY5PSH	pyridoxal 5'-phosphate synthase	Cgl0788 and Cgl0789	g3p_c + gln__L_c + r5p_c --> glu__L_c + 3.0 h2o_c + h_c + pi_c + pydx5p_c	0.345	iBridge
+others	TKT2_reverse	N/A	Cgl1575	f6p_c + g3p_c --> e4p_c + xu5p__D_c	0.224	iBridge
+others	TRATF_num2	taurine aminotransferase	Cgl0202	akg_c + tau_c --> 2saa_c + glu__L_c	0.188	iBridge
+others	PHETA1_reverse_num2	N/A	Cgl2101	akg_c + phe__L_c --> glu__L_c + phpyr_c	0.188	iBridge
+others	LEUTAi_reverse	N/A	Cgl2204	akg_c + leu__L_c --> 4mop_c + glu__L_c	0.188	iBridge
+others	TYRTA_reverse_num1	N/A	Cgl0218	akg_c + tyr__L_c --> 34hpp_c + glu__L_c	0.188	iBridge
+others	PHETA1_reverse_num1	N/A	Cgl0218	akg_c + phe__L_c --> glu__L_c + phpyr_c	0.188	iBridge
+others	TYRTA_reverse_num2	N/A	Cgl2101	akg_c + tyr__L_c --> 34hpp_c + glu__L_c	0.188	iBridge
+others	OHPBAT_reverse	N/A	Cgl0828	akg_c + phthr_c --> glu__L_c + ohpb_c	0.188	iBridge
+others	TRATF_num1	taurine aminotransferase	Cgl2441	akg_c + tau_c --> 2saa_c + glu__L_c	0.188	iBridge
+others	ILETA_reverse	N/A	Cgl2204	akg_c + ile__L_c --> 3mop_c + glu__L_c	0.188	iBridge
+others	ALATA_L_reverse	N/A	Cgl2844	akg_c + ala__L_c --> glu__L_c + pyr_c	0.188	iBridge
+others	PY5PSH_reverse	N/A	Cgl0788 and Cgl0789	glu__L_c + 3.0 h2o_c + h_c + pi_c + pydx5p_c --> g3p_c + gln__L_c + r5p_c	0.182	iBridge
+others	RBK_num1	ribokinase	Cgl1366	atp_c + rib__D_c --> adp_c + h_c + r5p_c	0.174	iBridge
+others	RBK_num2	ribokinase	Cgl2325	atp_c + rib__D_c --> adp_c + h_c + r5p_c	0.174	iBridge
+others	PRPPS_reverse	N/A	Cgl0942	amp_c + h_c + prpp_c --> atp_c + r5p_c	0.167	iBridge
+others	PY5PSH_reverse	N/A	Cgl0788 and Cgl0789	glu__L_c + 3.0 h2o_c + h_c + pi_c + pydx5p_c --> g3p_c + gln__L_c + r5p_c	0.149	iBridge
+others	GAPD_reverse_num2	N/A	Cgl1588	13dpg_c + h_c + nadh_c --> g3p_c + nad_c + pi_c	0.126	iBridge
+others	TKT2_reverse	N/A	Cgl1575	f6p_c + g3p_c --> e4p_c + xu5p__D_c	0.111	iBridge
+others	TALA_reverse	N/A	Cgl1575	e4p_c + f6p_c --> g3p_c + s7p_c	0.097	iBridge
+others	TALA_reverse	N/A	Cgl1575	e4p_c + f6p_c --> g3p_c + s7p_c	0.063	iBridge
+others	PSCVT_reverse	N/A	Cgl0764	3psme_c + pi_c --> pep_c + skm5p_c	0.046	iBridge
+others	PGM_num5	phosphoglycerate mutase	Cgl0402	3pg_c --> 2pg_c	0.018	iBridge
+others	PGM_num4	phosphoglycerate mutase	cg3506	3pg_c --> 2pg_c	0.018	iBridge
+others	PGM_num3	phosphoglycerate mutase	Cgl2350	3pg_c --> 2pg_c	0.018	iBridge
+others	PGM_num2	phosphoglycerate mutase	Cgl2236	3pg_c --> 2pg_c	0.018	iBridge
+others	PGM_num1	phosphoglycerate mutase	Cgl1058	3pg_c --> 2pg_c	0.018	iBridge

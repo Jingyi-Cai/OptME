@@ -758,20 +758,18 @@ def FBA_template2(coef_matrix=None,metabolites_lnC=None,reaction_g0=None,lb_list
 
 
 def Model_Solve(model, solver=None):
-    """Solve a Pyomo model with the user-selected solver and parameters.
+    """Solve a Pyomo model with the selected solver.
 
     solver defaults to OPTME_PYOMO_SOLVER (then OPTME_COBRA_SOLVER).
-    OPTME_SOLVER_OPTIONS is a JSON object of solver option names and values.
+    The thread count comes from solver_budget for this step. Other values in
+    OPTME_SOLVER_OPTIONS, such as a time limit, are kept.
     """
+    from solver_budget import options_for_solver
+
     if not solver:
         solver = os.environ.get("OPTME_PYOMO_SOLVER") or os.environ.get("OPTME_COBRA_SOLVER") or "cplex"
     opt = pyo.SolverFactory(solver)
-    raw = os.environ.get("OPTME_SOLVER_OPTIONS", "").strip()
-    options = json.loads(raw) if raw else {}
-    if options:
-        opt.solve(model, options=options)
-    else:
-        opt.solve(model)
+    opt.solve(model, options=options_for_solver(solver))
     return model
 
 #Maximum growth rate calculation

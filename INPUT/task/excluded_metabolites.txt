@@ -1,0 +1,1 @@
+/home/leon/data/Project/靶点设计网站/20260720/OPTME/gscas/server_script/optme/iBridge/input1/task/excluded_metabolites.txt

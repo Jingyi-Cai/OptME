@@ -1,5 +1,4 @@
-HCO3E	0.156	co2_c + h2o_c --> h_c + hco3_c	CO2 + H2O --> H+ + Bicarbonate	(0.0, 1000.0)	{}
-PPC	0.129	co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c	CO2 + H2O + Phosphoenolpyruvate --> H+ + Oxaloacetate + Phosphate	(0.0, 1000.0)	{}
+PPC	0.218	co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c	CO2 + H2O + Phosphoenolpyruvate --> H+ + Oxaloacetate + Phosphate	(0.0, 1000.0)	{}
 ACONTa	0.246	cit_c --> acon_C_c + h2o_c	Citrate --> cis-Aconitate + H2O	(0.0, 1000.0)	{}
 ACONTb	0.246	acon_C_c + h2o_c --> icit_c	cis-Aconitate + H2O --> Isocitrate	(0.0, 1000.0)	{}
 AKGDH	0.185	akg_c + coa_c + nad_c --> co2_c + nadh_c + succoa_c	2-Oxoglutarate + Coenzyme A + Nicotinamide adenine dinucleotide --> CO2 + Nicotinamide adenine dinucleotide - reduced + Succinyl-CoA	(0.0, 1000.0)	{}
@@ -38,5 +37,4 @@ PPKr_reverse	0.102	adp_c + ppi_c --> atp_c + pi_c	ADP + Diphosphate --> ATP + Ph
 RPI_reverse	0.102	ru5p__D_c --> r5p_c	D-Ribulose 5-phosphate --> alpha-D-Ribose 5-phosphate	(0.0, 1000.0)	{}
 H2Otpp_reverse	1.936	h2o_c --> h2o_e	H2O --> H2O	(0.0, 1000.0)	{}
 PGM_num5	0.719	3pg_c --> 2pg_c	3-Phospho-D-glycerate --> D-Glycerate 2-phosphate	(0.0, 1000.0)	{}
-ACCOAC_num2	0.151	accoa_c + atp_c + hco3_c --> adp_c + h_c + malcoa_c + pi_c	Acetyl-CoA + ATP + Bicarbonate --> ADP + H+ + Malonyl-CoA + Phosphate	(0.0, 1000.0)	{}
 MCOATA_num2	0.151	ACP_c + malcoa_c --> coa_c + malACP_c	acyl carrier protein + Malonyl-CoA --> Coenzyme A + Malonyl-[acyl-carrier protein]	(0.0, 1000.0)	{}

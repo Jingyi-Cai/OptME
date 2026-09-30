@@ -12,7 +12,7 @@ from modelbuilder import *
 import copy
 from cobra import Model, Reaction, Metabolite
 from sympy import subsets
-from cobra.flux_analysis.variability import flux_variability_analysis
+from solver_budget import install_cobra_threads, parallel_fva, use_sequential_threads
 from cobra import Reaction, Metabolite, Model
 from cobra.flux_analysis.loopless import add_loopless, loopless_solution
 from cobra.flux_analysis import pfba
@@ -70,7 +70,7 @@ def prepare_model_optforce(path_model,path_task,taskname):
 def calculate_biomass_optforce(inputdic,model,path_results):
     model.objective=inputdic['biomass']
     v0_biomass=model.optimize().objective_value
-    fva_wild = flux_variability_analysis(model, loopless=True,fraction_of_optimum=0.9)
+    fva_wild = parallel_fva(model, loopless=True, fraction_of_optimum=0.9)
         # 创建空字典
     result_dict = {}
     # model.reactions.get_by_id(inputdic['substrate']).bounds=(-inputdic['substrate_uptake_rate'],0)
@@ -105,7 +105,7 @@ def calculate_product_optforce(inputdic,v0_biomass,model,path_results):
     model.reactions.get_by_id(inputdic['biomass']).bounds=(v0_biomass*0.1,v0_biomass*0.1)
     model.objective=inputdic['product']
     v1_product_max=model.optimize().objective_value
-    fva_over = flux_variability_analysis(model, loopless=True,fraction_of_optimum=0.9)
+    fva_over = parallel_fva(model, loopless=True, fraction_of_optimum=0.9)
     # 创建空字典
     result_dict = {}
     model_pfba_solution = cobra.flux_analysis.pfba(model)
@@ -1255,7 +1255,7 @@ def threshold(reactiondf):
     reactiondf.loc[reactiondf['direction'] == 1, 'manipulation'] = None
 
     # Cap up and down targets to MAX_TARGETS each, ranked by abs(mean_flux) * result
-    MAX_TARGETS = 30
+    MAX_TARGETS = 50
     reactiondf['_rank_score'] = abs(reactiondf['mean_flux']) * reactiondf['result']
     for _direction in ['up', 'down']:
         _mask = reactiondf['manipulation'] == _direction
@@ -1972,6 +1972,8 @@ if __name__=="__main__":
         os.makedirs(path_results3)
     if not os.path.exists(path_results4):
         os.makedirs(path_results4)
+    use_sequential_threads()
+    install_cobra_threads()
     cobra_config = cobra.Configuration()
     cobra_config.solver = os.environ.get("OPTME_COBRA_SOLVER", "cplex")
     model,inputdic = prepare_model(path_model,path_task,taskname)
