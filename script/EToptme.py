@@ -23,6 +23,33 @@ matplotlib.use(os.environ.get("MPLBACKEND", "Agg"))
 import matplotlib.pyplot as plt
 
 
+def threshold_enabled():
+    """Whether target methods apply the log2 fold-change threshold.
+
+    Reads the OPTME_THRESHOLD environment variable:
+      0  apply the log2 fold-change threshold (|log2FC| > 1)
+      1  no fold-change threshold (default, old behavior)
+
+    The value is set once in run_icw_example.py and inherited by this
+    script through the environment.
+    """
+    return os.environ.get("OPTME_THRESHOLD", "1").strip() == "0"
+
+
+def max_targets():
+    """Maximum number of up/down targets kept per method.
+
+    Reads the OPTME_MAX_TARGETS environment variable (default 50). Targets
+    that can be ranked by fold change are kept from the highest fold change
+    down, at most this many up and this many down per method.
+    """
+    try:
+        n = int(os.environ.get("OPTME_MAX_TARGETS", "50"))
+    except (TypeError, ValueError):
+        n = 50
+    return n if n > 0 else 50
+
+
 def get_constraint_params(model_name):
     """Return model-specific defaults for E_total, B_value and K_value."""
     b_value = 0
@@ -630,7 +657,7 @@ def calculate_wildrange(Concretemodel_Need_Data,obj_name,inputdic):
     results = {}
     constr_coeff = {}
     constr_coeff['fix_reactions'] = {} 
-    Concretemodel_Need_Data['E_total'] = totalE * 1.01
+    Concretemodel_Need_Data['E_total'] = totalE
     Concretemodel_Need_Data['B_value'] = B_value1 * 0.98
     constr_coeff['substrate_constrain'] = (get_substrate_uptake_id(inputdic),objvalue2)
     if 'iML' in inputdic['model']:
@@ -724,8 +751,8 @@ def calculate_over(Concretemodel_Need_Data,obj_name,inputdic):
     results = {}
     constr_coeff={}
     constr_coeff['fix_reactions']={} 
-    Concretemodel_Need_Data['E_total']=totalE2*1.01
-    Concretemodel_Need_Data['B_value']=B_value2*0.9     
+    Concretemodel_Need_Data['E_total']=totalE2*1.0001
+    Concretemodel_Need_Data['B_value']=B_value2*0.99     
     constr_coeff['substrate_constrain']=(get_substrate_uptake_id(inputdic),objvalue2)
     constr_coeff['biomass_constrain']=(inputdic['biomass'],v0_biomass*0.1) 
     constr_coeff['product_constrain']=(inputdic['product'],v1_product_max*0.95) 
@@ -1029,9 +1056,21 @@ def must_df(enzyme_results_data,enzyme_overresults2_data,range_change,mean_chang
         meged_df.loc[meged_df['gene'] == gene, 'manipulations'] = 'Up'
     for gene, _ in down_data:
         meged_df.loc[meged_df['gene'] == gene, 'manipulations'] = 'down'
-    # Fold_Change threshold rule on log2 scale
-    meged_df.loc[(meged_df['manipulations'] == 'Up') & (meged_df['Fold_change'] <= 1), 'manipulations'] = None
-    meged_df.loc[(meged_df['manipulations'] == 'down') & (meged_df['Fold_change'] >= -1), 'manipulations'] = None
+    # Fold_Change threshold rule on log2 scale (Fold_change = log2(over/ref)).
+    # Applied only when OPTME_THRESHOLD=0; disabled by default (old ET-OptME
+    # behavior keeps the range-comparison direction unchanged).
+    if threshold_enabled():
+        meged_df.loc[(meged_df['manipulations'] == 'Up') & (meged_df['Fold_change'] <= 1), 'manipulations'] = None
+        meged_df.loc[(meged_df['manipulations'] == 'down') & (meged_df['Fold_change'] >= -1), 'manipulations'] = None
+    # Cap Up/down targets to OPTME_MAX_TARGETS each, ranked by fold change
+    # (Up: highest log2 Fold_change first; down: most negative first).
+    _max_targets = max_targets()
+    for _direction, _ascending in (('Up', False), ('down', True)):
+        _mask = meged_df['manipulations'] == _direction
+        _candidates = meged_df[_mask].sort_values('Fold_change', ascending=_ascending)
+        if len(_candidates) > _max_targets:
+            _drop_indices = _candidates.index[_max_targets:]
+            meged_df.loc[_drop_indices, 'manipulations'] = None
     meged_df['e1(mmol/gDW)']=meged_df['gene'].map(e_dict).apply(lambda x: format(x,'.3e'))
     meged_df['kcat(1/h)'] = meged_df['gene'].map(gene_kcat_mapping)
     mw_dict=Concretemodel_Need_Data['mw_dict']
@@ -1430,8 +1469,8 @@ def biomass(product,inputdic):
     reactiondf = pd.DataFrame()
     obj_name = inputdic['biomass']
     e_total, b_value, k_value = get_constraint_params(inputdic['model'])
-    for i in exlistn:
-        cond = i
+
+    def _biomass_condition(cond, inputdic, FSEOFdf, reactiondf):
         obj_name = inputdic['biomass']
         obj_target='maximize'
         mode = get_fba_mode(Concretemodel_Need_Data)
@@ -1506,6 +1545,22 @@ def biomass(product,inputdic):
         FSEOFdf['cond = '+str(cond)] = model_e1_solution['e1']
         reactiondf['reaction'] = model_reaction_solution['reaction']
         reactiondf['cond = '+str(cond)] = model_reaction_solution['flux']               
+        return FSEOFdf, reactiondf
+
+    for i in exlistn:
+        cond = i
+        try:
+            FSEOFdf, reactiondf = _biomass_condition(
+                cond, inputdic, FSEOFdf, reactiondf)
+        except Exception as exc:
+            # One bad product-flux condition must not abort the whole
+            # E_FSEOF method: skip it and continue with the rest.
+            print(
+                f"E_FSEOF: condition {cond} failed ({exc}); "
+                "skipping it and continuing with the next condition.")
+            if 'gene' not in FSEOFdf.columns:
+                FSEOFdf['gene'] = list(
+                    Concretemodel_Need_Data['mw_dict'].keys())
     return FSEOFdf,reactiondf
 
 # def check_monotonicity(row):
@@ -1674,13 +1729,27 @@ def result(FSEOFdf):
     FSEOFdf['enzyme_usage_over'] = FSEOFdf['gene'].map(normalized_E_dict)
     FSEOFdf['enzyme_usage_over'] = pd.to_numeric(FSEOFdf['enzyme_usage_over'], errors='coerce').fillna(0.0)
 
-    # Fold_Change threshold rule on log2 scale
-    FSEOFdf.loc[(FSEOFdf['manipulations'] == 'up') & (FSEOFdf['mean_fluxs'] <= 1), 'manipulations'] = None
-    FSEOFdf.loc[(FSEOFdf['manipulations'] == 'down') & (FSEOFdf['mean_fluxs'] >= -1), 'manipulations'] = None
+    # Fold_Change threshold rule on log2 scale (mean_fluxs = log2(last3/first3))
+    # and the nearly-zero enzyme-cost floor. Applied only when
+    # OPTME_THRESHOLD=0; disabled by default (old ET-OptME behavior keeps the
+    # monotonicity-derived direction unchanged and has no enzyme-cost floor).
+    if threshold_enabled():
+        FSEOFdf.loc[(FSEOFdf['manipulations'] == 'up') & (FSEOFdf['mean_fluxs'] <= 1), 'manipulations'] = None
+        FSEOFdf.loc[(FSEOFdf['manipulations'] == 'down') & (FSEOFdf['mean_fluxs'] >= -1), 'manipulations'] = None
 
-    # Discard nearly-zero enzyme-cost targets
-    low_cost_threshold = 1e-10
-    FSEOFdf.loc[FSEOFdf['enzyme_usage_over'].abs() <= low_cost_threshold, 'manipulations'] = None
+        # Discard nearly-zero enzyme-cost targets
+        low_cost_threshold = 1e-10
+        FSEOFdf.loc[FSEOFdf['enzyme_usage_over'].abs() <= low_cost_threshold, 'manipulations'] = None
+
+    # Cap up/down targets to OPTME_MAX_TARGETS each, ranked by fold change
+    # (up: highest log2 fold change first; down: most negative first).
+    _max_targets = max_targets()
+    for _direction, _ascending in (('up', False), ('down', True)):
+        _mask = FSEOFdf['manipulations'] == _direction
+        _candidates = FSEOFdf[_mask].sort_values('mean_fluxs', ascending=_ascending)
+        if len(_candidates) > _max_targets:
+            _drop_indices = _candidates.index[_max_targets:]
+            FSEOFdf.loc[_drop_indices, 'manipulations'] = None
 
     FSEOFdf = FSEOFdf.sort_values(by='enzyme_usage_over', ascending=False)
     return FSEOFdf

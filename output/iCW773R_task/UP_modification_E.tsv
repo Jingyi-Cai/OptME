@@ -1,14 +1,69 @@
 pathway	uniprot_id	Enzyme	reaction	Score_sum	Methods
-Threonine and Lysine Metabolism	P26512	Cgl0251	ASPK	1.42	E_FSEOF, E_OptForce
-Threonine and Lysine Metabolism	Q8NP73	Cgl1943	DAPE	1.0	E_FSEOF
-Threonine and Lysine Metabolism	Q8NS65	Cgl0814	SDPTA	0.904	E_FSEOF
-Threonine and Lysine Metabolism	Q59284	Cgl1109	SDPDS	0.904	E_FSEOF
-Threonine and Lysine Metabolism	P19808	Cgl1971	DHDPS	0.904	E_FSEOF
-Threonine and Lysine Metabolism	P0C1D8	Cgl0252	ASAD	0.478	E_FSEOF
-others	P26512	Cgl0251	ASPK_reverse	1.42	E_FSEOF, E_OptForce
-others	Q8NP73	Cgl1943	DAPE_reverse	1.0	E_FSEOF
-others	H7C7K2	Cgl0689	PYRC_reverse	1.0	E_OptForce
-others	H7C7K2	Cgl0689	PYRC	1.0	E_OptForce
-others	Q8NS65	Cgl0814	SDPTA_reverse	0.904	E_FSEOF
-others	P0C1D8	Cgl0252	ASAD_reverse	0.478	E_FSEOF
-Citric Acid Cycle	Q8NTE1, Q8NRC3, Q8NNJ2	Cgl0366 and Cgl1129 and Cgl2207	AKGDH	0.67	E_OptForce
+others	Q8NTF5	Cgl0352	UAGCVT_num1	0.0	
+others	Q79VH2	Cgl1108	THDPS_num2	0.942	E_FSEOF
+others	Q8NP73	Cgl1943	DAPE_reverse	1.776	E_FSEOF, E_OptForce
+others	Q8NNQ3	Cgl2135	DAPDC_num2	1.891	E_FSEOF, E_OptForce
+others	P0C1D8	Cgl0252	ASAD_reverse	0.928	E_FSEOF, E_OptForce
+others	P26512	Cgl0251	ASPK_reverse	0.925	E_FSEOF, E_OptForce
+others	Q79VF1	Cgl2061	NH4tpp_reverse_num1	0.721	E_FSEOF, E_OptForce
+others	Q79VF1	Cgl2061	NH4tpp_num1	0.721	E_FSEOF, E_OptForce
+others	Q8NQ65	Cgl1574	TKT1_reverse	0.629	E_OptForce
+others	Q8NTR2	Cgl0240	ASPTA_reverse	0.29	E_OptForce
+others	H7C7K2	Cgl0689	PYRC_reverse	0.188	E_OptForce
+others	H7C7K2	Cgl0689	PYRC	0.188	E_OptForce
+others	Q8NQ49	Cgl1598	RPE_reverse	0.179	E_OptForce
+others	Q8NLN1	Cgl2910	PYK_num2	0.152	E_OptForce
+others	Q8NQ64	Cgl1575	TKT2_reverse	0.126	E_OptForce
+others	Q8NQ64	Cgl1575	TALA_reverse	0.126	E_OptForce
+others	Q8NS65	Cgl0814	SDPTA_reverse	1.776	E_FSEOF, E_OptForce
+others	Q8NRN8	Cgl1010	FUM_reverse	0.115	E_OptForce
+others	Q8NQ63	Cgl1576	G6PDH2r_reverse	0.095	E_OptForce
+others	Q79VE3	Cgl2214	GLNS_num1	0.0	
+others	Q8NTB0	Cgl0397	UAMDH_num2	0.0	
+others	Q79VD9	Cgl2446	SHSL1_num1	0.0	
+others	Q8NRV4	Cgl0937	GAPD_reverse_num1	0.008	E_OptForce
+others	Q8NRV4	Cgl0937	GAPD_num1	0.008	E_OptForce
+others	Q01655	Cgl1587	PGK_reverse	0.014	E_OptForce
+others	Q8NRS1	Cgl0974	ENO_reverse	0.025	E_OptForce
+others	Q8NSH7	Cgl0696	CS_num1	0.056	E_OptForce
+others	Q8NQ98	Cgl1540	ACONTb_reverse	0.057	E_OptForce
+others	Q8NQ98	Cgl1540	ACONTa_reverse	0.057	E_OptForce
+Threonine and Lysine Metabolism	Q8NS65	Cgl0814	SDPTA	1.776	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	P0C1D8	Cgl0252	ASAD	0.928	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	Q59284	Cgl1109	SDPDS	1.782	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	P19808	Cgl1971	DHDPS	1.778	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	Q8NP73	Cgl1943	DAPE	1.776	E_FSEOF, E_OptForce
+Threonine and Lysine Metabolism	P26512	Cgl0251	ASPK	0.925	E_FSEOF, E_OptForce
+Pentose Phosphate Pathway	Q8NQ61	Cgl1578	PGL	0.077	E_OptForce
+Pentose Phosphate Pathway	Q8NQI2	Cgl1452	GND	0.079	E_OptForce
+Pentose Phosphate Pathway	Q8NQ63	Cgl1576	G6PDH2r	0.095	E_OptForce
+Pentose Phosphate Pathway	Q8NQ64	Cgl1575	TKT2	0.126	E_OptForce
+Pentose Phosphate Pathway	Q8NQ64	Cgl1575	TALA	0.126	E_OptForce
+Pentose Phosphate Pathway	Q8NQ65	Cgl1574	TKT1	0.629	E_OptForce
+Pentose Phosphate Pathway	Q8NQ49	Cgl1598	RPE	0.179	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD11	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD3	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD10	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD2	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD7	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD4	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD5	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	3NTD9pp	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD6	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD1	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	3NTD7pp	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD8	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD12	1.0	E_OptForce
+Nucleotide Salvage Pathway	Q8NTH9	Cgl0328	NTD9	1.0	E_OptForce
+Glutamate Metabolism	P31026	Cgl2079	GLUDy	0.539	E_FSEOF, E_OptForce
+Citric Acid Cycle	Q8NRN8	Cgl1010	FUM	0.115	E_OptForce
+Citric Acid Cycle	Q8NQ98	Cgl1540	ACONTa	0.057	E_OptForce
+Citric Acid Cycle	Q8NQ98	Cgl1540	ACONTb	0.057	E_OptForce
+Citric Acid Cycle	P50216	Cgl0664	ICDHyr	0.056	E_OptForce
+Citric Acid Cycle	Q8NTE1, Q8NRC3, Q8NNJ2	Cgl0366 and Cgl1129 and Cgl2207	AKGDH	0.142	E_OptForce
+Alanine and Aspartate Metabolism	Q8NTR2	Cgl0240	ASPTA	0.29	E_OptForce
+Glycolysis/Gluconeogenesis	Q8NRS1	Cgl0974	ENO	0.025	E_OptForce
+Glycolysis/Gluconeogenesis	Q01655	Cgl1587	PGK	0.014	E_OptForce
+Oxidative Phosphorylation	Q9AEL8, Q8NNK3, Q8NNK2, Q79VD7	Cgl2192 and Cgl2194 and Cgl2195 and Cgl2523	CYTBO3_4pp	0.006	E_OptForce
+Oxidative Phosphorylation	Q9AEL8, Q8NNK3, Q8NNK2, Q79VD7	Cgl2192 and Cgl2194 and Cgl2195 and Cgl2523	CYTBD2pp	0.006	E_OptForce
+Oxidative Phosphorylation	Q9AEL8, Q8NNK3, Q8NNK2, Q79VD7	Cgl2192 and Cgl2194 and Cgl2195 and Cgl2523	CYTBDpp	0.006	E_OptForce

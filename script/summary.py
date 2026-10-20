@@ -72,6 +72,15 @@ def product(inputdic,model):
     v1_product_max=model.optimize().objective_value    
     return v1_product_max
 
+def get_substrate_uptake_id(inputdic):
+    """Return the positive-flux uptake reaction used by split models."""
+    if inputdic.get('substrate_uptake'):
+        return inputdic['substrate_uptake']
+    substrate = str(inputdic['substrate'])
+    if substrate.endswith('_reverse'):
+        return substrate
+    return substrate + '_reverse'
+
 
 def get_composition_from_formula(met_formula):
     element_re = re.compile("([A-Z][a-z]?)([0-9.]+[0-9.]?|(?=[A-Z])?)")
@@ -110,10 +119,9 @@ def calculated_yield_optforce(path_task,inputdic,model,prod0):
     substrate_molecular = 0
     product_molecular = 0
     substrate = 0
-    if inputdic['substrate'].endswith('_reverse'):
-        inputdic['substrate'] = inputdic['substrate'][:-len('_reverse')]
+    substrate_id = get_substrate_uptake_id(inputdic)
     solution=model.optimize()
-    substrate=solution.fluxes.get(inputdic['substrate'], 0)
+    substrate=solution.fluxes.get(substrate_id, 0)
     met_C_file = os.path.join(path_task,'met_contain_C_df.tsv')
     met_C = pd.read_csv(met_C_file,sep='\t', index_col=0)
     solution_select=solution.fluxes[abs(solution.fluxes)>0.0000001]
@@ -200,7 +208,7 @@ def calculated_yield_optforce(path_task,inputdic,model,prod0):
             substrate_c_num_l=0
             substrate_molecular_l=0
             substrate_molecular_r=0
-            substrate_equ=model.reactions.get_by_id(inputdic['substrate'])
+            substrate_equ=model.reactions.get_by_id(substrate_id)
             # get product metabolites and coefficients
             metabolite_ids_s = [metabolite.id for metabolite in substrate_equ.metabolites.keys()]
             coefficients_s = [substrate_equ.metabolites[metabolite] for metabolite in substrate_equ.metabolites.keys()]
@@ -258,7 +266,7 @@ def calculated_yield_optforce(path_task,inputdic,model,prod0):
             # elif 'EX_glc_e_reverse'+"_reverse" in list(flux_solution_df_select.index):
             #     result_static['C Yield']=abs(round((product_c_num*flux_solution_df_select.loc[product_id,'fluxes'])/(substrate_c_num*flux_solution_df_select.loc['EX_glc_e_reverse'+"_reverse",'fluxes']),7))
             Ycm = substrate_c_num/product_c_num
-            if inputdic['substrate'] in list(list(solution_select.index)):
+            if substrate_id in solution_select.index and substrate:
                 Carbon_Yield0=abs(round((product_c_num*prod0)/(substrate_c_num*substrate),3)) 
                 Mass_Yield0=abs(round((product_molecular*prod0)/(substrate_molecular*substrate),3))
         # #¼ÆËãµÃÂÊ
@@ -267,8 +275,8 @@ def calculated_yield_optforce(path_task,inputdic,model,prod0):
         except:
             Yield0=prod0
         else:
-            if inputdic['substrate'] in list(list(solution_select.index)) and substrate:
-                Yield0=abs(round(prod0/solution_select[inputdic['substrate']],3))
+            if substrate_id in solution_select.index and substrate:
+                Yield0=abs(round(prod0/substrate,3))
                 if substrate_molecular:
                     Mass_Yield0=abs(round((product_molecular*prod0)/(substrate_molecular*substrate),3)) 
             # elif 'EX_glc_e_reverse'+"_reverse" in list(flux_solution_df_select.index):

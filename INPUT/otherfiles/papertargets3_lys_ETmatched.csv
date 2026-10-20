@@ -1,0 +1,23 @@
+﻿Target,Manipulation,Direction,Ref.,ET-FSEOF,ET-EComp,FSEOF,OptForce,LLM,Reaction_IDs,Hits,Fold_change
+dapA,Overexpression,up,10.1128/AEM.05093-11,up,up,up,up,up,DHDPS,5,3.282
+lysC,Dynamic regulation,dynamic regulation,10.3390/microorganisms12030606,up,up,up,up,up,ASPK,5,2.18175
+hom,Deregulation,deregulation,10.1016/j.jprot.2010.07.006,down,down,down,,down,HSDy,4,2.8835
+thrB,Inactivation,down,10.1016/j.bej.2020.107665,down,down,down,,down,"4HTHRK,HSK",4,2.798333
+AK,Deregulation,deregulation,10.1016/j.ymben.2017.10.010,up,up,up,up,,ASPK,4,2.18175
+asd,Overexpression,up,10.1016/j.bej.2020.107665,up,up,up,up,,ASAD,4,2.151
+ilvC,Inactivation,down,10.1016/j.plasmid.2014.07.005,down,down,down,,,"DPR,KARA1,KARA2",3,2.727
+ilvE,Inactivation,down,10.1016/j.plasmid.2014.07.005,down,down,down,,,"ILETA,LEUTAi,PHETA1,TYRTA,VALTA",3,2.573667
+pyc,Overexpression,up,10.1128/aem.01942-09,up,up,,,up,"PYC,PYRC",3,0.881
+lysA,Introduction,up,10.1128/aem.01942-09,up,up,up,,,DAPDC,3,0.0
+dapE,Overexpression,up,10.1016/S0168-1656(03)00156-1,up,up,,,,SDPDS,2,3.5495
+dapF,Overexpression,up,10.1016/S0168-1656(03)00156-1,up,up,,,,DAPE,2,3.535
+dapB,Overexpression,up,10.1128/aem.01942-09,,,up,up,,DHDPRy,2,3.024
+ddh,Introduction,up,10.1016/j.ymben.2011.01.003,,,up,up,,DAPDH,2,3.0235
+leuA,Inactivation,down,10.1007/s00253-007-0916-x,down,,down,,,IPPS,2,2.4295
+ack,Inactivation,down,10.3389/fbioe.2021.669093,,down,,,,ACKr,1,2.856
+thrC,Inactivation,down,10.1016/S1389-1723(99)80196-0,,,down,,,THRS,1,2.628
+ilvN,Deregulation,deregulation,10.1128/AEM.01844-08,,,down,,,"ACHBS,ACLS",1,2.628
+ilvB,Inactivation,down,10.1128/AEM.01844-08,,,down,,,"ACHBS,ACLS",1,2.628
+pgk,Overexpression,up,10.1007/s10295-019-02170-w,,up,,,,PGK,1,0.076
+gapA,Introduction,up,10.1186/s12934-019-1114-0,,up,,,,"E4PD,GAPD,NADHHR,NADHHS,NADPHHR,NADPHHS",1,0.0
+gapX,Overexpression,up,10.1016/j.jbiotec.2012.07.190,,up,,,,GAPD,1,0.0

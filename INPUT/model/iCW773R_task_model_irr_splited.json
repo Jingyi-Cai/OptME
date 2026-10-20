@@ -8004,7 +8004,7 @@
 "pyr_c":1.0
 },
 "lower_bound":0.0,
-"upper_bound":1000.0,
+"upper_bound":0.0,
 "gene_reaction_rule":"Cgl3007",
 "annotation":{
 "ec-code":"1.1.1.40"
@@ -8533,8 +8533,7 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":"",
-"objective_coefficient":1.0
+"gene_reaction_rule":""
 },
 {
 "id":"BAMPN",
@@ -13784,7 +13783,8 @@
 },
 "lower_bound":0.0,
 "upper_bound":1000.0,
-"gene_reaction_rule":""
+"gene_reaction_rule":"",
+"objective_coefficient":1.0
 },
 {
 "id":"EX_mal__L_e",

@@ -1,46 +1,45 @@
 reaction_id	reaction_name	fluxes	gene id	equ	equ_name	abs_fluxes
-DHDPRy	dihydrodipicolinate reductase (NADPH)	0.5408298141110799	Cgl1973	23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c	2,3-Dihydrodipicolinate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> Nicotinamide adenine dinucleotide phosphate + 2,3,4,5-Tetrahydrodipicolinate	0.5408298141110799
-DHDPS	dihydrodipicolinate synthase	0.5408298141110799	Cgl1971	aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c	L-Aspartate 4-semialdehyde + Pyruvate --> 2,3-Dihydrodipicolinate + 2.0 H2O + H+	0.5408298141110799
-DAPDH	diaminopimelate dehydrogenase	0.4855794769846787	Cgl2617	2.0 h_c + nadph_c + nh4_c + thdp_c --> 26dap__M_c + nadp_c	2.0 H+ + Nicotinamide adenine dinucleotide phosphate - reduced + Ammonium + 2,3,4,5-Tetrahydrodipicolinate --> meso-2,6-Diaminoheptanedioate + Nicotinamide adenine dinucleotide phosphate	0.4855794769846787
-ASPK	aspartokinase	0.37984917876282986	Cgl0251	asp__L_c + atp_c --> 4pasp_c + adp_c	L-Aspartate + ATP --> 4-Phospho-L-aspartate + ADP	0.37984917876282986
-ASAD_reverse		0.37984917876282986	Cgl0252	4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c	4-Phospho-L-aspartate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> L-Aspartate 4-semialdehyde + Nicotinamide adenine dinucleotide phosphate + Phosphate	0.37984917876282986
-HCO3E	HCO3 equilibration reaction	0.0	Cgl2670	co2_c + h2o_c --> h_c + hco3_c	CO2 + H2O --> H+ + Bicarbonate	0.0
+DHDPRy	dihydrodipicolinate reductase (NADPH)	0.5281450782531064	Cgl1973	23dhdp_c + h_c + nadph_c --> nadp_c + thdp_c	2,3-Dihydrodipicolinate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> Nicotinamide adenine dinucleotide phosphate + 2,3,4,5-Tetrahydrodipicolinate	0.5281450782531064
+DHDPS	dihydrodipicolinate synthase	0.5281450782531064	Cgl1971	aspsa_c + pyr_c --> 23dhdp_c + 2.0 h2o_c + h_c	L-Aspartate 4-semialdehyde + Pyruvate --> 2,3-Dihydrodipicolinate + 2.0 H2O + H+	0.5281450782531064
+DAPDH	diaminopimelate dehydrogenase	0.5280163411892015	Cgl2617	2.0 h_c + nadph_c + nh4_c + thdp_c --> 26dap__M_c + nadp_c	2.0 H+ + Nicotinamide adenine dinucleotide phosphate - reduced + Ammonium + 2,3,4,5-Tetrahydrodipicolinate --> meso-2,6-Diaminoheptanedioate + Nicotinamide adenine dinucleotide phosphate	0.5280163411892015
+ASPK	aspartokinase	0.3630475945210935	Cgl0251	asp__L_c + atp_c --> 4pasp_c + adp_c	L-Aspartate + ATP --> 4-Phospho-L-aspartate + ADP	0.3630475945210935
+ASAD_reverse		0.3630475945210935	Cgl0252	4pasp_c + h_c + nadph_c --> aspsa_c + nadp_c + pi_c	4-Phospho-L-aspartate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced --> L-Aspartate 4-semialdehyde + Nicotinamide adenine dinucleotide phosphate + Phosphate	0.3630475945210935
+PPC	phosphoenolpyruvate carboxylase	0.0	Cgl1585	co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c	CO2 + H2O + Phosphoenolpyruvate --> H+ + Oxaloacetate + Phosphate	0.0
 ASPTA_reverse		0.0	Cgl0240	glu__L_c + oaa_c --> akg_c + asp__L_c	L-Glutamate + Oxaloacetate --> 2-Oxoglutarate + L-Aspartate	0.0
-TKT1	transketolase	0.0	Cgl1574	r5p_c + xu5p__D_c --> g3p_c + s7p_c	alpha-D-Ribose 5-phosphate + D-Xylulose 5-phosphate --> Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate	0.0
-TKT2	transketolase	0.0	Cgl1575	e4p_c + xu5p__D_c --> f6p_c + g3p_c	D-Erythrose 4-phosphate + D-Xylulose 5-phosphate --> D-Fructose 6-phosphate + Glyceraldehyde 3-phosphate	0.0
+GLCabcpp	D-glucose transport via ABC system	0.0	Cgl0030 and Cgl0031 and Cgl0032	atp_c + glc__D_e + h2o_c --> adp_c + glc__D_c + h_c + pi_c	ATP + D-Glucose + H2O --> ADP + D-Glucose + H+ + Phosphate	0.0
 GLCptspp	D-glucose transport via PEP:Pyr PTS	0.0	Cgl3036	glc__D_e + pep_c --> g6p_c + pyr_c	D-Glucose + Phosphoenolpyruvate --> D-Glucose 6-phosphate + Pyruvate	0.0
+LYSt3pp	L-lysine transport out via proton antiport	0.0		h_e + lys__L_c --> h_c + lys__L_e	H+ + L-Lysine --> H+ + L-Lysine	0.0
 CO2tpp	CO2 transporter via diffusion	0.0		co2_c --> co2_e	CO2 --> CO2	0.0
-MDH_reverse		0.0	Cgl2380	h_c + nadh_c + oaa_c --> mal__L_c + nad_c	H+ + Nicotinamide adenine dinucleotide - reduced + Oxaloacetate --> L-Malate + Nicotinamide adenine dinucleotide	0.0
-RPE	ribulose 5-phosphate 3-epimerase	0.0	Cgl1598	ru5p__D_c --> xu5p__D_c	D-Ribulose 5-phosphate --> D-Xylulose 5-phosphate	0.0
 EX_glc_e_reverse		0.0		 --> glc__D_e	 --> D-Glucose	0.0
+EX_co2_e	CO2 exchange	0.0		co2_e --> 	CO2 --> 	0.0
 EX_nh4_e_reverse		0.0		 --> nh4_e	 --> Ammonium	0.0
+EX_o2_e_reverse		0.0		 --> o2_e	 --> O2	0.0
 PGI_reverse		0.0	Cgl0851	f6p_c --> g6p_c	D-Fructose 6-phosphate --> D-Glucose 6-phosphate	0.0
 RPI_reverse		0.0	Cgl2423	ru5p__D_c --> r5p_c	D-Ribulose 5-phosphate --> alpha-D-Ribose 5-phosphate	0.0
 H2Otpp_reverse		0.0		h2o_c --> h2o_e	H2O --> H2O	0.0
-LYSt2pp_reverse		0.0	Cgl0968	h_c + lys__L_c --> h_e + lys__L_e	H+ + L-Lysine --> H+ + L-Lysine	0.0
-PGM_num2	phosphoglycerate mutase	0.0	Cgl2236	3pg_c --> 2pg_c	3-Phospho-D-glycerate --> D-Glycerate 2-phosphate	0.0
+GAPD_num2	glyceraldehyde-3-phosphate dehydrogenase	0.0	Cgl1588	g3p_c + nad_c + pi_c --> 13dpg_c + h_c + nadh_c	Glyceraldehyde 3-phosphate + Nicotinamide adenine dinucleotide + Phosphate --> 3-Phospho-D-glyceroyl phosphate + H+ + Nicotinamide adenine dinucleotide - reduced	0.0
+PGM_num5	phosphoglycerate mutase	0.0	Cgl0402	3pg_c --> 2pg_c	3-Phospho-D-glycerate --> D-Glycerate 2-phosphate	0.0
 NH4tpp_num2	ammonia reversible transport	0.0	Cgl1583	nh4_e --> nh4_c	Ammonium --> Ammonium	0.0
+TKT2	transketolase	0.0	Cgl1575	e4p_c + xu5p__D_c --> f6p_c + g3p_c	D-Erythrose 4-phosphate + D-Xylulose 5-phosphate --> D-Fructose 6-phosphate + Glyceraldehyde 3-phosphate	0.0
+TKT1	transketolase	0.0	Cgl1574	r5p_c + xu5p__D_c --> g3p_c + s7p_c	alpha-D-Ribose 5-phosphate + D-Xylulose 5-phosphate --> Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate	0.0
 TALA	transaldolase	0.0	Cgl1575	g3p_c + s7p_c --> e4p_c + f6p_c	Glyceraldehyde 3-phosphate + Sedoheptulose 7-phosphate --> D-Erythrose 4-phosphate + D-Fructose 6-phosphate	0.0
-PGL	6-phosphogluconolactonase	0.0	Cgl1578	6pgl_c + h2o_c --> 6pgc_c + h_c	6-phospho-D-glucono-1,5-lactone + H2O --> 6-Phospho-D-gluconate + H+	0.0
-ME2	malic enzyme (NADP)	0.0	Cgl3007	mal__L_c + nadp_c --> co2_c + nadph_c + pyr_c	L-Malate + Nicotinamide adenine dinucleotide phosphate --> CO2 + Nicotinamide adenine dinucleotide phosphate - reduced + Pyruvate	0.0
-GND	phosphogluconate dehydrogenase	0.0	Cgl1452	6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c	6-Phospho-D-gluconate + Nicotinamide adenine dinucleotide phosphate --> CO2 + Nicotinamide adenine dinucleotide phosphate - reduced + D-Ribulose 5-phosphate	0.0
-PPC	phosphoenolpyruvate carboxylase	0.0	Cgl1585	co2_c + h2o_c + pep_c --> h_c + oaa_c + pi_c	CO2 + H2O + Phosphoenolpyruvate --> H+ + Oxaloacetate + Phosphate	0.0
-PYRC	pyruvate carboxylase	0.0	Cgl0689	atp_c + hco3_c + pyr_c --> adp_c + h_c + oaa_c + pi_c	ATP + Bicarbonate + Pyruvate --> ADP + H+ + Oxaloacetate + Phosphate	0.0
-EX_co2_e	CO2 exchange	0.0		co2_e --> 	CO2 --> 	0.0
+PGK	phosphoglycerate kinase	0.0	Cgl1587	13dpg_c + adp_c --> 3pg_c + atp_c	3-Phospho-D-glyceroyl phosphate + ADP --> 3-Phospho-D-glycerate + ATP	0.0
 EX_h_e	H+ exchange	0.0		h_e --> 	H+ --> 	0.0
 EX_h2o_e	H2O exchange	0.0		h2o_e --> 	H2O --> 	0.0
 EX_lys_L_e	L-Lysine exchange	0.0		lys__L_e --> 	L-Lysine --> 	0.0
-EX_o2_e	O2 exchange	0.0		o2_e <=> 	O2 <=> 	0.0
 GLUDy	glutamate dehydrogenase (NADP)	0.0	Cgl2079	akg_c + h_c + nadph_c + nh4_c --> glu__L_c + h2o_c + nadp_c	2-Oxoglutarate + H+ + Nicotinamide adenine dinucleotide phosphate - reduced + Ammonium --> L-Glutamate + H2O + Nicotinamide adenine dinucleotide phosphate	0.0
 ENO	enolase	0.0	Cgl0974	2pg_c --> h2o_c + pep_c	D-Glycerate 2-phosphate --> H2O + Phosphoenolpyruvate	0.0
 FBA	fructose-bisphosphate aldolase	0.0	Cgl2770	fdp_c --> dhap_c + g3p_c	D-Fructose 1,6-bisphosphate --> Dihydroxyacetone phosphate + Glyceraldehyde 3-phosphate	0.0
-GAPD_num1	glyceraldehyde-3-phosphate dehydrogenase	0.0	Cgl0937	g3p_c + nad_c + pi_c --> 13dpg_c + h_c + nadh_c	Glyceraldehyde 3-phosphate + Nicotinamide adenine dinucleotide + Phosphate --> 3-Phospho-D-glyceroyl phosphate + H+ + Nicotinamide adenine dinucleotide - reduced	0.0
+HEX1	hexokinase (D-glucose:ATP)	0.0	Cgl2185	atp_c + glc__D_c --> adp_c + g6p_c + h_c	ATP + D-Glucose --> ADP + D-Glucose 6-phosphate + H+	0.0
 PFK	phosphofructokinase	0.0	Cgl1250	atp_c + f6p_c --> adp_c + fdp_c + h_c	ATP + D-Fructose 6-phosphate --> ADP + D-Fructose 1,6-bisphosphate + H+	0.0
-PGK	phosphoglycerate kinase	0.0	Cgl1587	13dpg_c + adp_c --> 3pg_c + atp_c	3-Phospho-D-glyceroyl phosphate + ADP --> 3-Phospho-D-glycerate + ATP	0.0
 TPI	triose-phosphate isomerase	0.0	Cgl1586	dhap_c --> g3p_c	Dihydroxyacetone phosphate --> Glyceraldehyde 3-phosphate	0.0
+RPE	ribulose 5-phosphate 3-epimerase	0.0	Cgl1598	ru5p__D_c --> xu5p__D_c	D-Ribulose 5-phosphate --> D-Xylulose 5-phosphate	0.0
 O2tpp	o2 transport via diffusion	0.0		o2_e --> o2_c	O2 --> O2	0.0
+NTP1	nucleoside-triphosphatase (ATP)	0.0		atp_c + h2o_c --> adp_c + h_c + pi_c	ATP + H2O --> ADP + H+ + Phosphate	0.0
 ATPS4rpp	ATP synthase (four protons for one ATP)	0.0	Cgl1213 and Cgl1211 and Cgl1210 and Cgl1208 and Cgl1212 and Cgl1209 and Cgl1207 and Cgl1206	adp_c + 4.0 h_e + pi_c --> atp_c + h2o_c + 3.0 h_c	ADP + 4.0 H+ + Phosphate --> ATP + H2O + 3.0 H+	0.0
-CYTBO3_4pp	cytochrome oxidase bo3 (ubiquinol-8: 4 protons)	0.0	Cgl2194 and Cgl2523 and Cgl2195 and Cgl2192	4.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 4.0 h_e + q8_c	4.0 H+ + 0.5 O2 + Ubiquinol-8 --> H2O + 4.0 H+ + Ubiquinone-8	0.0
-NADH16pp	NADH dehydrogenase (ubiquinone-8 & 3 protons)	0.0	Cgl2729 and Cgl2731 and Cgl0269	4.0 h_c + nadh_c + q8_c --> 3.0 h_e + nad_c + q8h2_c	4.0 H+ + Nicotinamide adenine dinucleotide - reduced + Ubiquinone-8 --> 3.0 H+ + Nicotinamide adenine dinucleotide + Ubiquinol-8	0.0
+CYTBDpp	cytochrome oxidase bd (ubiquinol-8: 2 protons)	0.0	Cgl2194 and Cgl2523 and Cgl2195 and Cgl2192	2.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 2.0 h_e + q8_c	2.0 H+ + 0.5 O2 + Ubiquinol-8 --> H2O + 2.0 H+ + Ubiquinone-8	0.0
+NADH5	NADH dehydrogenase (ubiquinone-8 )	0.0	Cgl0335	h_c + nadh_c + q8_c --> nad_c + q8h2_c	H+ + Nicotinamide adenine dinucleotide - reduced + Ubiquinone-8 --> Nicotinamide adenine dinucleotide + Ubiquinol-8	0.0
 G6PDH2r	glucose 6-phosphate dehydrogenase	0.0	Cgl1576	g6p_c + nadp_c --> 6pgl_c + h_c + nadph_c	D-Glucose 6-phosphate + Nicotinamide adenine dinucleotide phosphate --> 6-phospho-D-glucono-1,5-lactone + H+ + Nicotinamide adenine dinucleotide phosphate - reduced	0.0
+GND	phosphogluconate dehydrogenase	0.0	Cgl1452	6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c	6-Phospho-D-gluconate + Nicotinamide adenine dinucleotide phosphate --> CO2 + Nicotinamide adenine dinucleotide phosphate - reduced + D-Ribulose 5-phosphate	0.0
+PGL	6-phosphogluconolactonase	0.0	Cgl1578	6pgl_c + h2o_c --> 6pgc_c + h_c	6-phospho-D-glucono-1,5-lactone + H2O --> 6-Phospho-D-gluconate + H+	0.0
 DAPDC_num2	diaminopimelate decarboxylase	0.0	Cgl2135	26dap__M_c + h_c --> co2_c + lys__L_c	meso-2,6-Diaminoheptanedioate + H+ --> CO2 + L-Lysine	0.0

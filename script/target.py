@@ -31,6 +31,31 @@ import matplotlib.pyplot as plt
 from visualcode import *
 
 
+def threshold_enabled():
+    """Whether target methods apply the log2 fold-change threshold.
+
+    Reads the OPTME_THRESHOLD environment variable:
+      0  apply the log2 fold-change threshold (|log2FC| > 1)
+      1  no fold-change threshold (default, old behavior)
+
+    The value is set once in run_icw_example.py and inherited by this
+    script through the environment.
+    """
+    return os.environ.get("OPTME_THRESHOLD", "1").strip() == "0"
+
+
+def max_targets():
+    """Maximum number of up/down targets kept per method.
+
+    Reads the OPTME_MAX_TARGETS environment variable (default 50). Targets
+    that can be ranked by fold change are kept from the highest fold change
+    down, at most this many up and this many down per method.
+    """
+    try:
+        n = int(os.environ.get("OPTME_MAX_TARGETS", "50"))
+    except (TypeError, ValueError):
+        n = 50
+    return n if n > 0 else 50
 
 
 def prepare_model_optforce(path_model,path_task,taskname):
@@ -440,8 +465,18 @@ def must_df(enzyme_results_data,enzyme_overresults2_data,range_change,ko_data,up
     meged_df['range_change'] = meged_df['range_change'].apply(lambda x: round(x, 3))
     meged_df['mean_change'] = meged_df['mean_change'].apply(lambda x: round(x, 3))
     empty_gpr_indices = meged_df[meged_df['gpr'] == ''].index
-    meged_df.loc[(meged_df['manipulations'] == 'Up') & (meged_df['range_change'] <= 1), 'manipulations'] = None
-    meged_df.loc[(meged_df['manipulations'] == 'down') & (meged_df['range_change'] >= -1), 'manipulations'] = None
+    if threshold_enabled():
+        meged_df.loc[(meged_df['manipulations'] == 'Up') & (meged_df['range_change'] <= 1), 'manipulations'] = None
+        meged_df.loc[(meged_df['manipulations'] == 'down') & (meged_df['range_change'] >= -1), 'manipulations'] = None
+    # Cap Up/down targets to OPTME_MAX_TARGETS each, ranked by fold change
+    # (Up: highest log2 range_change first; down: most negative first).
+    _max_targets = max_targets()
+    for _direction, _ascending in (('Up', False), ('down', True)):
+        _mask = meged_df['manipulations'] == _direction
+        _candidates = meged_df[_mask].sort_values('range_change', ascending=_ascending)
+        if len(_candidates) > _max_targets:
+            _drop_indices = _candidates.index[_max_targets:]
+            meged_df.loc[_drop_indices, 'manipulations'] = None
 # 将这些行的 'manipulation' 列改为 None
     meged_df.loc[empty_gpr_indices, 'manipulations'] = None
     transport_rxns = []
@@ -1211,10 +1246,11 @@ def threshold(reactiondf):
     reactiondf['result'] = np.log2(ratio)
     reactiondf['result'] = reactiondf['result'].replace([np.inf, -np.inf], np.nan).fillna(0).round(3)
 
-    # Fold_Change threshold rule:
-    # Up targets must satisfy log2FC > 1, Down targets must satisfy log2FC < -1
-    reactiondf.loc[(reactiondf['manipulation'] == 'up') & (reactiondf['result'] <= 1), 'manipulation'] = None
-    reactiondf.loc[(reactiondf['manipulation'] == 'down') & (reactiondf['result'] >= -1), 'manipulation'] = None
+    # Fold_Change threshold rule on log2 scale (|log2FC| > 1).
+    # Applied only when OPTME_THRESHOLD=0; disabled by default.
+    if threshold_enabled():
+        reactiondf.loc[(reactiondf['manipulation'] == 'up') & (reactiondf['result'] <= 1), 'manipulation'] = None
+        reactiondf.loc[(reactiondf['manipulation'] == 'down') & (reactiondf['result'] >= -1), 'manipulation'] = None
     result_per_row = {}
     for index, row in reactiondf.iterrows():
         result_per_row[row['reaction']] = row['result']
@@ -1254,16 +1290,15 @@ def threshold(reactiondf):
     # 将 direction 为 1 的行的 manipulation 列设置为 None
     reactiondf.loc[reactiondf['direction'] == 1, 'manipulation'] = None
 
-    # Cap up and down targets to MAX_TARGETS each, ranked by abs(mean_flux) * result
-    MAX_TARGETS = 50
-    reactiondf['_rank_score'] = abs(reactiondf['mean_flux']) * reactiondf['result']
-    for _direction in ['up', 'down']:
+    # Cap up and down targets to OPTME_MAX_TARGETS each, ranked by fold change
+    # (up: highest log2FC first; down: most negative log2FC first).
+    _max_targets = max_targets()
+    for _direction, _ascending in (('up', False), ('down', True)):
         _mask = reactiondf['manipulation'] == _direction
-        _candidates = reactiondf[_mask].sort_values('_rank_score', ascending=False)
-        if len(_candidates) > MAX_TARGETS:
-            _drop_indices = _candidates.index[MAX_TARGETS:]
+        _candidates = reactiondf[_mask].sort_values('result', ascending=_ascending)
+        if len(_candidates) > _max_targets:
+            _drop_indices = _candidates.index[_max_targets:]
             reactiondf.loc[_drop_indices, 'manipulation'] = None
-    reactiondf.drop(columns=['_rank_score'], inplace=True)
     up_reactions = reactiondf[reactiondf['manipulation'] == 'up']
     down_reactions = reactiondf[reactiondf['manipulation'] == 'down']
 
@@ -1489,7 +1524,7 @@ def detail_put(model_input,meged_df,path_results3):
             # mean_value = round(mean_value[0], 3) if mean_value else None
             if isinstance(mean_value, list):
                 mean_value = round(mean_value[0], 3) if mean_value else None
-        # ½«Ã¿¸ö·´Ó¦ºÍ¶ÔÓ¦µÄ 'range_change' Öµ´æ´¢ÔÚ×ÖµäÖÐ
+
 
             reaction_dict = {
                     "Modification": "UP",

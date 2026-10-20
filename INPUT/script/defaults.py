@@ -1,0 +1,81 @@
+# coding:utf-8
+"""
+Author: Biodesign Center, TIB
+Function: Metabolite and biomass-component identifiers used to recognize a biomass reaction.
+Input: None. visualcode.py imports these lists.
+Output: Name lists for biomass, protein, DNA, and RNA components. No files are written.
+"""
+
+ATP = ["atp_c", "atp[c]", "atp[e]", "C00002", "ATP", "MNXM3", "cpd00002", "cpd00002_m0","cpd00002_c0", "HMDB00538", "ZKHQWZAMYRWXGA-KQYNXXCUSA-J", "MNXM3@MNXC3",
+         "MNXM3@MNXC8", "MNXM3@MNXC4", "MNXM3@MNXC2", "MNXM3@BOUNDARY", "MNXM3@MNXC6", "MNXM3@MNXC11", "MNXM3@MNXC15", "MNXM3@MNXC13",
+         "MNXM3@MNXD1", "MNXM3@MNXD2", "MNXM3@MNXC19", "MNXM3@MNXC17", "s_0434@MNXC3", "C00002@MNXC3", "MNXM728294@MNXC3"]
+
+BIOMASS = ['A. niger biomass','Biomass: total']
+
+ALA = ['ala_L[c]','ala_L@MNXC3','MNXM1105732@MNXD1','ala__L_c','cpd00035_c0','L-ALPHA-ALANINE','C00041','alatrna_c','cpd00035','MNXM1105732@MNXC3','MNXM1105732@MNXC2','C00041_biomass@MNXC3']
+
+ARG = ['arg_L[c]','arg_L@MNXC3','MNXM739527@MNXD1','arg__L_c','cpd00051_c0','ARG','C00062','argtrna_c','cpd00051','MNXM739527@MNXC3','MNXM739527@MNXC2','C00062_biomass@MNXC3']
+
+ASN = ['asn_L[c]','asn_L@MNXC3','MNXM728945@MNXD1','asn__L_c','cpd00132_c0','ASN','C00152','asntrna_c','cpd00132','MNXM728945@MNXC3','MNXM728945@MNXC2','C00152_biomass@MNXC3','MNXM1107821@MNXC3','MNXM1107821@MNXC2','MNXM1107821@MNXD1']
+
+ASP = ['asp_L[c]','asp_L@MNXC3','MNXM1108206@MNXD1','asp__L_c','cpd00041_c0','L-ASPARTATE','C00049','asptrna_c','cpd00041','MNXM1108206@MNXC3','MNXM1108206@MNXC2','C00049_biomass@MNXC3']
+
+CYS = ['cys_L[c]','cys_L@MNXC3','MNXM738068@MNXD1','cys__L_c','cpd00084_c0','CYS','C00097','cystrna_c','cpd00084','MNXM738068@MNXC3','MNXM738068@MNXC2','C02291_biomass@MNXC3']
+
+GLN = ['gln_L[c]','cpd00053','cpd00053_c0','gln_L@MNXC3','MNXM37@MNXD1','gln__L_c','cpd00053_c0','GLN','C00064','glntrna_c','cpd00053','MNXM37@MNXC3','MNXM37@MNXC2','C00025_biomass@MNXC3']
+
+GLU = ['glu_L[c]','glu_L@MNXC3','MNXM741173@MNXD1','glu__L_c','cpd00023_c0','GLT','C00025','glutrna_c','cpd00023','MNXM741173@MNXC3','MNXM741173@MNXC2','C00064_biomass@MNXC3']
+
+GLY = ['gly[c]','gly_L@MNXC3','MNXM222@MNXD1','gly_c','cpd00033_c0','GLY','C00037','glytrna_c','cpd00033','MNXM222@MNXC3','MNXM222@MNXC2','C00037_biomass@MNXC3','MNXM29@MNXC3','MNXM29@MNXC2','MNXM29@MNXD1']
+
+HIS = ['his_L[c]','his_L@MNXC3','MNXM1107769@MNXD1','his__L_c','cpd00119_c0','HIS','C00135','histrna_c','cpd00119','MNXM1107769@MNXC3','MNXM1107769@MNXC2','C00135_biomass@MNXC3']
+
+LEU = ['leu_L[c]','leu_L@MNXC3','MNXM140@MNXD1','leu__L_c','cpd00107_c0','LEU','C00123','leutrna_c','cpd00107','MNXM140@MNXC3','MNXM140@MNXC2','C00123_biomass@MNXC3','MNXM1106762@MNXC3','MNXM1106762@MNXD1','MNXM1106762@MNXC2']
+
+ILE = ['ile_L[c]','ile_L@MNXC3','MNXM1106761@MNXD1','ile__L_c','cpd00322_c0','ILE','C00407','iletrna_c','cpd00322','MNXM1106761@MNXC3','MNXM1106761@MNXC2','C00407_biomass@MNXC3','MNXM728337@MNXC3','MNXM728337@MNXD1','MNXM728337@MNXC2']
+
+LYS = ['lys_L[c]','cpd00039','cpd00039_c0','lys_L@MNXC3','MNXM1106164@MNXD1','lys__L_c','cpd19182_c0','LYS','C16440','lystrna_c','cpd19182','MNXM1106164@MNXC3','MNXM1106164@MNXC2','C00047_biomass@MNXC3']
+
+MET = ['met_L[c]','met_L@MNXC3','MNXM738804@MNXD1','met__L_c','cpd00060_c0','MET','C00073','mettrna_c','cpd00060','MNXM738804@MNXC3','MNXM738804@MNXC2','C00073_biomass@MNXC3']
+
+PHE = ['phe_L[c]','phe_L@MNXC3','MNXM741664@MNXD1','phe__L_c','cpd00066_c0','PHE','C00079','phetrna_c','cpd00066','MNXM741664@MNXC3','MNXM741664@MNXC2','C00079_biomass@MNXC3']
+
+PRO = ['pro_L[c]','cpd00129','cpd00129_c0','pro_L@MNXC3','MNXM114@MNXD1','pro__L_c','PRO','C00148','protrna_c','MNXM114@MNXC3','MNXM114@MNXC2','C00148_biomass@MNXC3']
+
+SER = ['ser_L[c]','ser_L@MNXC3','MNXM737787@MNXD1','ser__L_c','cpd00054_c0','SER','C00065','sertrna_c','cpd00054','MNXM737787@MNXC3','MNXM737787@MNXC2','C00065_biomass@MNXC3']
+
+THR = ['thr_L[c]','thr_L@MNXC3','MNXM142@MNXD1','thr__L_c','cpd00161_c0','THR','C00188','thrtrna_c','cpd00161','MNXM142@MNXC3','MNXM142@MNXC2','C00188_biomass@MNXC3']
+
+TRP = ['trp_L[c]','trp_L@MNXC3','MNXM741554@MNXD1','trp__L_c','cpd00065_c0','TRP','C00078','trptrna_c','cpd00065','MNXM741554@MNXC3','MNXM741554@MNXC2','C00078_biomass@MNXC3','MNXM741553@MNXC3','MNXM741553@MNXD1','MNXM741553@MNXC2']        ###meta列表包含bigg、kegg、modelseed、metacyc等模型id，支持更新
+
+TYR = ['tyr_L[c]','tyr_L@MNXC3','MNXM76@MNXD1','tyr__L_c','cpd00069_c0','TYR','C01536','tyrtrna_c','cpd00069','MNXM76@MNXC3','MNXM76@MNXC2','C00082_biomass@MNXC3']
+
+VAL = ['val_L[c]','val_L@MNXC3','MNXM199@MNXD1','val__L_c','cpd00156_c0','VAL','C00183','valtrna_c','cpd00156','MNXM199@MNXC3','MNXM199@MNXC2','C00183_biomass@MNXC3']
+
+PROTEIN = ['1gPROTEIN2_c','protein_c','Protein','MNXM733324@MNXC3','s_3717@MNXC3','PROTEIN_c']
+
+PROTEIN_COMPOSITION  = ALA + ARG + ASN + ASP + CYS + GLN + GLU + GLY + HIS + ILE + LEU + LYS + MET + PHE + PRO + SER + THR + TRP + TYR + VAL
+
+DATP = ['datp[c]','MNXM286@MNXC3','datp_c','cpd00115_c0','DATP','C00131','datp_n','damp_c','cpd00115','MNXM286@MNXC2','MNXM286@MNXD1','C00131@MNXC3','MNXM286@MNXC4','MNXM286@MNXC6','MNXM432@MNXC3']
+
+DCTP = ['dctp[c]','MNXM360@MNXC3','dctp_c','cpd00356_c0','DCTP','C00458','dctp_n','dcmp_c','cpd00356','MNXM360@MNXC2','MNXM360@MNXD1','C00458@MNXC3','MNXM360@MNXC4','MNXM360@MNXC6','MNXM266@MNXC3']
+
+DGTP = ['dgtp[c]','MNXM344@MNXC3','dgtp_c','cpd00241_c0','DGTP','C00286','dgtp_n','dgmp_c','cpd00241','MNXM344@MNXC2','MNXM344@MNXD1','C00286@MNXC3','MNXM344@MNXC4','MNXM344@MNXC6','MNXM736654@MNXC3']
+
+DTTP = ['dttp[c]','MNXM394@MNXC3','dttp_c','cpd00357_c0','TTP','C00459','dttp_n','dtmp_c','cpd00357','MNXM394@MNXC2','MNXM394@MNXD1','C00459@MNXC3','MNXM394@MNXC4','MNXM394@MNXC6','MNXM257@MNXC3']
+
+RNA = ['RNA_c','rna_c','1gRNA2_c','RNA','s_3719@MNXC3']
+
+DNA = ['DNA_c','dna_c','1gDNA2_c','DNA','s_3720@MNXC3']
+
+DNA_COMPOSITION = DATP + DCTP + DGTP + DTTP
+
+CTP = ['ctp[c]','MNXM1103718@MNXC3','ctp_c','cpd00052_c0','CTP','C00063','cpd00052','MNXM1103718@MNXC2','MNXM1103718@MNXD1','C00063@MNXC3','MNXM1103302@MNXC3']
+
+GTP = ['gtp[c]','MNXM1103553@MNXC3','gtp_c','cpd00038_c0','GTP','C00044','cpd00038','MNXM1103553@MNXC2','MNXM1103553@MNXD1','C00044@MNXC3','MNXM1101285@MNXC3']
+
+UTP = ['utp[c]','MNXM1101474@MNXC3','utp_c','cpd00062_c0','UTP','C00075','cpd00062','MNXM1101474@MNXC2','MNXM1101474@MNXD1','C00075@MNXC3','MNXM1104823@MNXC3']
+
+RNA_COMPOSITION = CTP + GTP + UTP + ATP
+
+DNA_RNA = DNA + RNA + DNA_COMPOSITION + RNA_COMPOSITION

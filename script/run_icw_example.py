@@ -451,6 +451,66 @@ def ask_llm(task):
     return task
 
 
+def ask_threshold():
+    """Choose the target-method log2 fold-change threshold.
+
+    Sets OPTME_THRESHOLD, which is inherited by target.py, EToptme.py and
+    sum.py (via summary.py). Applies to FSEOF, OptForce, E_FSEOF and
+    E_OptForce:
+      0  apply the log2 fold-change threshold (|log2FC| > 1)
+      1  no fold-change threshold (default, old behavior)
+    """
+    print(f"\n{SEP}")
+    print("  Target threshold (FSEOF / OptForce / E_FSEOF / E_OptForce)")
+    print(SEP)
+    print("    0  apply log2 fold-change threshold (|log2FC| > 1)")
+    print("    1  no fold-change threshold (default, old behavior)")
+    print()
+
+    if not sys.stdin.isatty():
+        value = os.environ.get("OPTME_THRESHOLD", "1").strip()
+    else:
+        value = prompt("  Threshold (0/1)", os.environ.get("OPTME_THRESHOLD", "1"))
+        value = (value or "1").strip()
+
+    value = value if value in ("0", "1") else "1"
+    os.environ["OPTME_THRESHOLD"] = value
+    print(f"  Target threshold: {value} ({'log2 threshold' if value == '0' else 'no threshold'})")
+    return value
+
+
+def ask_max_targets():
+    """Choose the maximum number of targets kept per direction per method.
+
+    Sets OPTME_MAX_TARGETS, which is inherited by target.py and EToptme.py
+    (via summary.py). Methods that can be ranked by fold change (FSEOF,
+    OptForce, E_FSEOF, E_OptForce) keep at most this many up targets and at
+    most this many down targets, ranked from the highest fold change down.
+    """
+    print(f"\n{SEP}")
+    print("  Max targets per direction (FSEOF / OptForce / E_FSEOF / E_OptForce)")
+    print(SEP)
+    print("    Methods that can be ranked by fold change keep at most N up")
+    print("    and N down targets, from the highest fold change down.")
+    print()
+
+    if not sys.stdin.isatty():
+        value = os.environ.get("OPTME_MAX_TARGETS", "50").strip()
+    else:
+        value = prompt("  Max targets per direction (N)", os.environ.get("OPTME_MAX_TARGETS", "50"))
+        value = (value or "50").strip()
+
+    try:
+        n = int(value)
+        if n < 1:
+            raise ValueError
+    except (TypeError, ValueError):
+        n = 50
+    os.environ["OPTME_MAX_TARGETS"] = str(n)
+    print(f"  Max targets per direction: {n}")
+    return n
+
+
 def configure_dirs(default_task_dir, default_model_dir, default_map_dir, default_output_dir):
     """Let the user confirm or change the four key directories."""
     print(f"\n{SEP}")
@@ -513,6 +573,8 @@ def review_and_confirm(job_id, task, task_dir, model_dir, map_dir, output_dir, m
     print(f"  Solver path: {os.environ.get('OPTME_SOLVER_PATH', '')}")
     print(f"  Solver     : {os.environ.get('OPTME_SOLVER', '')}")
     print(f"  Parameters : {os.environ.get('OPTME_SOLVER_OPTIONS', '(defaults)')}")
+    print(f"  Threshold: {os.environ.get('OPTME_THRESHOLD', '1')} (0=log2 threshold, 1=no threshold)")
+    print(f"  Max targets: {os.environ.get('OPTME_MAX_TARGETS', '50')} per direction (up and down)")
     print(f"  Model dir  : {model_dir}")
     print(f"  Map dir    : {map_dir}")
     print(f"  Output dir : {output_dir}")
@@ -556,6 +618,8 @@ def main():
     with open(task_path, encoding="utf-8") as handle:
         task = json.load(handle)
     task = ask_llm(task)
+    ask_threshold()
+    ask_max_targets()
     methods = task.get("taskname", [])
     if isinstance(methods, str):
         methods = [methods]
